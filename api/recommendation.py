@@ -80,14 +80,13 @@ def recommender():
 
     number_of_users = df.user_id.unique().shape[0]
     number_of_movies = df.movie_id.unique().shape[0]
-
     number_of_features = 10
 
     Y = np.zeros((number_of_movies, number_of_users))
     for row in df.itertuples():
-        movie = Movie.objects.get(id=row[2])
-        m_id = movie.movie_id
-        Y[m_id - 1, row[4] - 1] = row[3]
+        #movie = Movie.objects.get(id=row[2])
+        #m_id = movie.movie_id
+        Y[row[2] - 1, row[4] - 1] = row[3]
 
     R = np.zeros((number_of_movies, number_of_users))
     for i in range(Y.shape[0]):

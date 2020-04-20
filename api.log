@@ -564,3 +564,167 @@ INFO -- 2020-04-19 20:31:36,567 -- received request: recommend with user_id 4
 INFO -- 2020-04-19 20:42:44,408 -- received request: recommend with user_id 4
 INFO -- 2020-04-19 20:44:01,556 -- received request: recommend with user_id 4
 INFO -- 2020-04-20 08:47:59,162 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 14:52:25,171 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 14:54:14,394 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 14:56:27,058 -- received fovorite request
+INFO -- 2020-04-20 14:56:39,176 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-04-20 14:57:15,314 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-04-20 14:57:25,049 -- received request: premieres of the week
+INFO -- 2020-04-20 14:57:25,053 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,053 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,053 -- number of days to wait to 2020-04-08 00:00:00+00:00 is : -13
+INFO -- 2020-04-20 14:57:25,053 -- number of days to wait to 2020-04-05 00:00:00+00:00 is : -16
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-04 00:00:00+00:00 is : -17
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,054 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-09 00:00:00+00:00 is : -12
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-19 00:00:00+00:00 is : -2
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-09 00:00:00+00:00 is : -12
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-09 00:00:00+00:00 is : -12
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-01 00:00:00+00:00 is : -20
+INFO -- 2020-04-20 14:57:25,055 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-02 00:00:00+00:00 is : -19
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-02 00:00:00+00:00 is : -19
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-12 00:00:00+00:00 is : -9
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,056 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-01 00:00:00+00:00 is : -20
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-20 00:00:00+00:00 is : -1
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-04 00:00:00+00:00 is : -17
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-02 00:00:00+00:00 is : -19
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,057 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-08 00:00:00+00:00 is : -13
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-01 00:00:00+00:00 is : -20
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-18 00:00:00+00:00 is : -3
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-12 00:00:00+00:00 is : -9
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,058 -- number of days to wait to 2020-04-19 00:00:00+00:00 is : -2
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,059 -- number of days to wait to 2020-04-12 00:00:00+00:00 is : -9
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-04 00:00:00+00:00 is : -17
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-18 00:00:00+00:00 is : -3
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,060 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-01 00:00:00+00:00 is : -20
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-05 00:00:00+00:00 is : -16
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-09 00:00:00+00:00 is : -12
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-10 00:00:00+00:00 is : -11
+INFO -- 2020-04-20 14:57:25,061 -- number of days to wait to 2020-04-18 00:00:00+00:00 is : -3
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-09 00:00:00+00:00 is : -12
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-09 00:00:00+00:00 is : -12
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-08 00:00:00+00:00 is : -13
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-18 00:00:00+00:00 is : -3
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-20 00:00:00+00:00 is : -1
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,062 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-12 00:00:00+00:00 is : -9
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-09 00:00:00+00:00 is : -12
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-02 00:00:00+00:00 is : -19
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-01 00:00:00+00:00 is : -20
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,063 -- number of days to wait to 2020-04-04 00:00:00+00:00 is : -17
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-19 00:00:00+00:00 is : -2
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-05 00:00:00+00:00 is : -16
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-20 00:00:00+00:00 is : -1
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,064 -- number of days to wait to 2020-04-19 00:00:00+00:00 is : -2
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-16 00:00:00+00:00 is : -5
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-03 00:00:00+00:00 is : -18
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-05 00:00:00+00:00 is : -16
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-04 00:00:00+00:00 is : -17
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-20 00:00:00+00:00 is : -1
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-20 00:00:00+00:00 is : -1
+INFO -- 2020-04-20 14:57:25,065 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-01 00:00:00+00:00 is : -20
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-19 00:00:00+00:00 is : -2
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-15 00:00:00+00:00 is : -6
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-18 00:00:00+00:00 is : -3
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-20 00:00:00+00:00 is : -1
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-02 00:00:00+00:00 is : -19
+INFO -- 2020-04-20 14:57:25,066 -- number of days to wait to 2020-04-04 00:00:00+00:00 is : -17
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-11 00:00:00+00:00 is : -10
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-13 00:00:00+00:00 is : -8
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-12 00:00:00+00:00 is : -9
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-05 00:00:00+00:00 is : -16
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-07 00:00:00+00:00 is : -14
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-06 00:00:00+00:00 is : -15
+INFO -- 2020-04-20 14:57:25,067 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-08 00:00:00+00:00 is : -13
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-18 00:00:00+00:00 is : -3
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-12 00:00:00+00:00 is : -9
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-08 00:00:00+00:00 is : -13
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-02 00:00:00+00:00 is : -19
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-14 00:00:00+00:00 is : -7
+INFO -- 2020-04-20 14:57:25,068 -- number of days to wait to 2020-04-20 00:00:00+00:00 is : -1
+INFO -- 2020-04-20 14:57:25,069 -- number of days to wait to 2020-04-12 00:00:00+00:00 is : -9
+INFO -- 2020-04-20 14:57:25,069 -- number of days to wait to 2020-04-17 00:00:00+00:00 is : -4
+INFO -- 2020-04-20 14:57:25,069 -- number of days to wait to 2020-04-01 00:00:00+00:00 is : -20
+INFO -- 2020-04-20 14:57:32,451 -- received request: set rating from user 4: aida
+INFO -- 2020-04-20 14:57:50,879 -- received request: set rating from user 4: aida
+INFO -- 2020-04-20 14:58:04,579 -- received request: set rating from user 4: aida
+INFO -- 2020-04-20 14:58:29,067 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 15:07:42,988 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 15:09:52,872 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 15:11:04,124 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 15:12:04,309 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 15:13:15,900 -- received request: recommend with user_id 4
+INFO -- 2020-04-20 15:17:16,588 -- received request: recommend with user_id 4
