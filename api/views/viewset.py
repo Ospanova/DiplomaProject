@@ -164,7 +164,7 @@ class MovieViewSet(viewsets.ModelViewSet):
         pred_idxs_sorted = pred_idxs_sorted + 1
 
         preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(pred_idxs_sorted)])
-        predicted_movies = list(Movie.objects.filter(id__in=pred_idxs_sorted, ).order_by(preserved)[:10])
+        predicted_movies = list(Movie.objects.filter(movie_id__in=pred_idxs_sorted, ).order_by(preserved)[:10])
 
         serializer = MovieSerializer(predicted_movies, many=True)
         return Response(serializer.data)
