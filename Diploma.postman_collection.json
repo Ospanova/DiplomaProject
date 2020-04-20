@@ -1,0 +1,1073 @@
+{
+	"info": {
+		"_postman_id": "98be99aa-c3b3-4039-8e8c-1005143767cb",
+		"name": "Diploma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "attach",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzQwMjcsImVtYWlsIjoicnJAbWFpbC5ydSJ9.-FTnI1lkSh4SnIeGn7yhWuQ1bj2LrHoN8kydADzhQtw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/attach/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"attach",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fill ratings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzQwMjcsImVtYWlsIjoicnJAbWFpbC5ydSJ9.-FTnI1lkSh4SnIeGn7yhWuQ1bj2LrHoN8kydADzhQtw"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/fill_ratings/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"fill_ratings",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "fill ratings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzQwMjcsImVtYWlsIjoicnJAbWFpbC5ydSJ9.-FTnI1lkSh4SnIeGn7yhWuQ1bj2LrHoN8kydADzhQtw"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/fill_ratings/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"fill_ratings",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 20:20:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								}
+							],
+							"cookie": [],
+							"body": "\"OK\""
+						}
+					]
+				},
+				{
+					"name": "Get favourite movies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/favorite/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"favorite",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get recommend",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/recommend/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"recommend",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get recommend",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/recommend/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"recommend",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 20:44:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Get movies by rating",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/get_sorted_by_rating/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"get_sorted_by_rating",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get movies by rating",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/get_sorted_by_rating/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"get_sorted_by_rating",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 15:00:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26630"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 688,\n        \"name\": \"A Midwinter's Tale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 616,\n        \"name\": \"Ace Ventura: When Nature Calls (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 634,\n        \"name\": \"Across the Sea of Time (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 736,\n        \"name\": \"Amateur (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-03T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 735,\n        \"name\": \"An Awfully Big Adventure (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 721,\n        \"name\": \"Angela (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 678,\n        \"name\": \"Angels and Insects (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 707,\n        \"name\": \"Anne Frank Remembered (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 675,\n        \"name\": \"Antonia's Line (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 737,\n        \"name\": \"Apollo 13 (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 620,\n        \"name\": \"Assassins (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 631,\n        \"name\": \"Babe (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 732,\n        \"name\": \"Bad Boys (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 610,\n        \"name\": \"Balto (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 740,\n        \"name\": \"Batman Forever (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 686,\n        \"name\": \"Beautiful Girls (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 667,\n        \"name\": \"Bed of Roses (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Romance|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 704,\n        \"name\": \"Before and After (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 741,\n        \"name\": \"Belle de Jour (1967)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 742,\n        \"name\": \"Beyond Rangoon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 668,\n        \"name\": \"Big Bully (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-03T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 660,\n        \"name\": \"Bio-Dome (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 681,\n        \"name\": \"Black Sheep (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 713,\n        \"name\": \"Boomerang (1992)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 693,\n        \"name\": \"Bottle Rocket (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 702,\n        \"name\": \"Braveheart (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 687,\n        \"name\": \"Broken Arrow (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 743,\n        \"name\": \"Canadian Bacon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 632,\n        \"name\": \"Carrington (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 613,\n        \"name\": \"Casino (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 744,\n        \"name\": \"Casper (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 700,\n        \"name\": \"Catwalk (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 714,\n        \"name\": \"Chungking Express (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 692,\n        \"name\": \"City Hall (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 745,\n        \"name\": \"Clockers (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 636,\n        \"name\": \"Clueless (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 746,\n        \"name\": \"Congo (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 619,\n        \"name\": \"Copycat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 637,\n        \"name\": \"Cry, the Beloved Country (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 612,\n        \"name\": \"Cutthroat Island (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 628,\n        \"name\": \"Dangerous Minds (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 633,\n        \"name\": \"Dead Man Walking (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 639,\n        \"name\": \"Dead Presidents (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 658,\n        \"name\": \"Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 725,\n        \"name\": \"Down Periscope (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 609,\n        \"name\": \"Dracula: Dead and Loving It (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 680,\n        \"name\": \"Dunston Checks In (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Adventure|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 656,\n        \"name\": \"Eye for an Eye (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 603,\n        \"name\": \"Father of the Bride Part II (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 716,\n        \"name\": \"Flirting with Disaster (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 615,\n        \"name\": \"Four Rooms (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 722,\n        \"name\": \"Frankie Starlight (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 663,\n        \"name\": \"French Twist (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 664,\n        \"name\": \"Friday (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 665,\n        \"name\": \"From Dusk Till Dawn (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 726,\n        \"name\": \"From the Journals of Jean Seberg (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 650,\n        \"name\": \"Georgia (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 618,\n        \"name\": \"Get Shorty (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 607,\n        \"name\": \"GoldenEye (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 601,\n        \"name\": \"Grumpier Old Men (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 706,\n        \"name\": \"Happiness Is in the Field (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 696,\n        \"name\": \"Happy Gilmore (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Sport\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 701,\n        \"name\": \"Headless Body in Topless Bar (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 604,\n        \"name\": \"Heat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 691,\n        \"name\": \"Heidi Fleiss: Hollywood Madam (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 652,\n        \"name\": \"Home for the Holidays (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 643,\n        \"name\": \"How to Make an American Quilt (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 709,\n        \"name\": \"If Lucy Fell (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 653,\n        \"name\": \"Il Postino: The Postman (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 635,\n        \"name\": \"It Takes Two (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 723,\n        \"name\": \"Jade (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 600,\n        \"name\": \"Jumanji (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 719,\n        \"name\": \"Jupiter's Wife (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 666,\n        \"name\": \"Kicking and Screaming (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 651,\n        \"name\": \"Kids of the Round Table (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 689,\n        \"name\": \"La Haine (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 649,\n        \"name\": \"Lamerica (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 677,\n        \"name\": \"Last Summer in the Hamptons (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 661,\n        \"name\": \"Lawnmower Man 2: Beyond Cyberspace (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 654,\n        \"name\": \"Le confessionnal (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Mystery|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 622,\n        \"name\": \"Leaving Las Vegas (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 727,\n        \"name\": \"Man of the Year (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 705,\n        \"name\": \"Margaret's Museum (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 684,\n        \"name\": \"Mary Reilly (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Horror|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 648,\n        \"name\": \"Mighty Aphrodite (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 617,\n        \"name\": \"Money Train (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 641,\n        \"name\": \"Mortal Kombat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 657,\n        \"name\": \"Mr. Holland's Opus (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 694,\n        \"name\": \"Mr. Wrong (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 699,\n        \"name\": \"Muppet Treasure Island (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 682,\n        \"name\": \"Nick of Time (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 670,\n        \"name\": \"Nico Icon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 611,\n        \"name\": \"Nixon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 698,\n        \"name\": \"Nobody Loves Me (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 624,\n        \"name\": \"Now and Then (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 676,\n        \"name\": \"Once Upon a Time... When We Were Colored (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 623,\n        \"name\": \"Othello (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 625,\n        \"name\": \"Persuasion\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 720,\n        \"name\": \"Pie in the Sky (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 645,\n        \"name\": \"Pocahontas (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 621,\n        \"name\": \"Powder (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Fantasy|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 711,\n        \"name\": \"Race the Sun (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 640,\n        \"name\": \"Restoration (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 638,\n        \"name\": \"Richard III (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 738,\n        \"name\": \"Rob Roy (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Biography|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 703,\n        \"name\": \"Rumble in the Bronx (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 605,\n        \"name\": \"Sabrina (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 669,\n        \"name\": \"Screamers (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 644,\n        \"name\": \"Se7en (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 614,\n        \"name\": \"Sense and Sensibility (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 690,\n        \"name\": \"Shopping (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 724,\n        \"name\": \"Sonic Outlaws (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 710,\n        \"name\": \"Steal Big Steal Little (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 606,\n        \"name\": \"Sudden Death (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 739,\n        \"name\": \"The Addiction (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 733,\n        \"name\": \"The Amazing Panda Adventure (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Family|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 608,\n        \"name\": \"The American President (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 734,\n        \"name\": \"The Basketball Diaries (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 730,\n        \"name\": \"The Birdcage (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 712,\n        \"name\": \"The Boys of St. Vincent (1992)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 697,\n        \"name\": \"The Bridges of Madison County (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 731,\n        \"name\": \"The Brothers McMullen (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 626,\n        \"name\": \"The City of Lost Children (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Fantasy|Sci-Fi\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 671,\n        \"name\": \"The Crossing Guard (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 655,\n        \"name\": \"The Indian in the Cupboard (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Family|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 683,\n        \"name\": \"The Journey of August King (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 672,\n        \"name\": \"The Juror (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 728,\n        \"name\": \"The Neon Bible (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 717,\n        \"name\": \"The Neverending Story III (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 718,\n        \"name\": \"The Silences of the Palace (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 715,\n        \"name\": \"The Star Maker (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 647,\n        \"name\": \"The Usual Suspects (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 673,\n        \"name\": \"The White Balloon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 708,\n        \"name\": \"The Young Poisoner's Handbook (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 674,\n        \"name\": \"Things to Do in Denver When You're Dead (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 642,\n        \"name\": \"To Die For (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 599,\n        \"name\": \"Toy Story (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 629,\n        \"name\": \"Twelve Monkeys (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Mystery|Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 662,\n        \"name\": \"Two Bits (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 659,\n        \"name\": \"Two If by Sea (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 695,\n        \"name\": \"Unforgettable (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Mystery|Sci-Fi\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 729,\n        \"name\": \"Up Close & Personal (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 685,\n        \"name\": \"Vampire in Brooklyn (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 602,\n        \"name\": \"Waiting to Exhale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 646,\n        \"name\": \"When Night Is Falling (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 679,\n        \"name\": \"White Squall (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 630,\n        \"name\": \"Wings of Courage (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 627,\n        \"name\": \"Yao a yao, yao dao wai po qiao (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 598,\n        \"name\": \"title\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"genre\",\n        \"rating\": 5,\n        \"creator_name\": \"alikhan\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get movies by genre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+								"type": "text"
+							},
+							{
+								"key": "genre",
+								"value": "Comedy",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/get_sorted_by_rating/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"get_sorted_by_rating",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get movies by rating",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/get_sorted_by_rating/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"get_sorted_by_rating",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 15:00:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26630"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 688,\n        \"name\": \"A Midwinter's Tale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 616,\n        \"name\": \"Ace Ventura: When Nature Calls (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 634,\n        \"name\": \"Across the Sea of Time (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 736,\n        \"name\": \"Amateur (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-03T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 735,\n        \"name\": \"An Awfully Big Adventure (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 721,\n        \"name\": \"Angela (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 678,\n        \"name\": \"Angels and Insects (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 707,\n        \"name\": \"Anne Frank Remembered (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 675,\n        \"name\": \"Antonia's Line (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 737,\n        \"name\": \"Apollo 13 (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 620,\n        \"name\": \"Assassins (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 631,\n        \"name\": \"Babe (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 732,\n        \"name\": \"Bad Boys (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 610,\n        \"name\": \"Balto (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 740,\n        \"name\": \"Batman Forever (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 686,\n        \"name\": \"Beautiful Girls (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 667,\n        \"name\": \"Bed of Roses (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Romance|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 704,\n        \"name\": \"Before and After (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 741,\n        \"name\": \"Belle de Jour (1967)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 742,\n        \"name\": \"Beyond Rangoon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 668,\n        \"name\": \"Big Bully (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-03T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 660,\n        \"name\": \"Bio-Dome (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 681,\n        \"name\": \"Black Sheep (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 713,\n        \"name\": \"Boomerang (1992)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 693,\n        \"name\": \"Bottle Rocket (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 702,\n        \"name\": \"Braveheart (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 687,\n        \"name\": \"Broken Arrow (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 743,\n        \"name\": \"Canadian Bacon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 632,\n        \"name\": \"Carrington (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 613,\n        \"name\": \"Casino (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 744,\n        \"name\": \"Casper (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 700,\n        \"name\": \"Catwalk (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 714,\n        \"name\": \"Chungking Express (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 692,\n        \"name\": \"City Hall (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 745,\n        \"name\": \"Clockers (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 636,\n        \"name\": \"Clueless (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 746,\n        \"name\": \"Congo (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 619,\n        \"name\": \"Copycat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 637,\n        \"name\": \"Cry, the Beloved Country (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 612,\n        \"name\": \"Cutthroat Island (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 628,\n        \"name\": \"Dangerous Minds (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 633,\n        \"name\": \"Dead Man Walking (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 639,\n        \"name\": \"Dead Presidents (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 658,\n        \"name\": \"Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 725,\n        \"name\": \"Down Periscope (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 609,\n        \"name\": \"Dracula: Dead and Loving It (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 680,\n        \"name\": \"Dunston Checks In (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Adventure|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 656,\n        \"name\": \"Eye for an Eye (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 603,\n        \"name\": \"Father of the Bride Part II (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 716,\n        \"name\": \"Flirting with Disaster (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 615,\n        \"name\": \"Four Rooms (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 722,\n        \"name\": \"Frankie Starlight (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 663,\n        \"name\": \"French Twist (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 664,\n        \"name\": \"Friday (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 665,\n        \"name\": \"From Dusk Till Dawn (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 726,\n        \"name\": \"From the Journals of Jean Seberg (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 650,\n        \"name\": \"Georgia (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 618,\n        \"name\": \"Get Shorty (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 607,\n        \"name\": \"GoldenEye (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 601,\n        \"name\": \"Grumpier Old Men (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 706,\n        \"name\": \"Happiness Is in the Field (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 696,\n        \"name\": \"Happy Gilmore (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Sport\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 701,\n        \"name\": \"Headless Body in Topless Bar (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 604,\n        \"name\": \"Heat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 691,\n        \"name\": \"Heidi Fleiss: Hollywood Madam (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 652,\n        \"name\": \"Home for the Holidays (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 643,\n        \"name\": \"How to Make an American Quilt (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 709,\n        \"name\": \"If Lucy Fell (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 653,\n        \"name\": \"Il Postino: The Postman (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 635,\n        \"name\": \"It Takes Two (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 723,\n        \"name\": \"Jade (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 600,\n        \"name\": \"Jumanji (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 719,\n        \"name\": \"Jupiter's Wife (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 666,\n        \"name\": \"Kicking and Screaming (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 651,\n        \"name\": \"Kids of the Round Table (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 689,\n        \"name\": \"La Haine (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 649,\n        \"name\": \"Lamerica (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 677,\n        \"name\": \"Last Summer in the Hamptons (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 661,\n        \"name\": \"Lawnmower Man 2: Beyond Cyberspace (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 654,\n        \"name\": \"Le confessionnal (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Mystery|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 622,\n        \"name\": \"Leaving Las Vegas (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 727,\n        \"name\": \"Man of the Year (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 705,\n        \"name\": \"Margaret's Museum (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 684,\n        \"name\": \"Mary Reilly (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Horror|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 648,\n        \"name\": \"Mighty Aphrodite (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 617,\n        \"name\": \"Money Train (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 641,\n        \"name\": \"Mortal Kombat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 657,\n        \"name\": \"Mr. Holland's Opus (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 694,\n        \"name\": \"Mr. Wrong (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 699,\n        \"name\": \"Muppet Treasure Island (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 682,\n        \"name\": \"Nick of Time (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 670,\n        \"name\": \"Nico Icon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 611,\n        \"name\": \"Nixon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 698,\n        \"name\": \"Nobody Loves Me (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 624,\n        \"name\": \"Now and Then (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 676,\n        \"name\": \"Once Upon a Time... When We Were Colored (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 623,\n        \"name\": \"Othello (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 625,\n        \"name\": \"Persuasion\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 720,\n        \"name\": \"Pie in the Sky (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 645,\n        \"name\": \"Pocahontas (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 621,\n        \"name\": \"Powder (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Fantasy|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 711,\n        \"name\": \"Race the Sun (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 640,\n        \"name\": \"Restoration (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 638,\n        \"name\": \"Richard III (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 738,\n        \"name\": \"Rob Roy (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Biography|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 703,\n        \"name\": \"Rumble in the Bronx (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 605,\n        \"name\": \"Sabrina (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 669,\n        \"name\": \"Screamers (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 644,\n        \"name\": \"Se7en (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 614,\n        \"name\": \"Sense and Sensibility (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 690,\n        \"name\": \"Shopping (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 724,\n        \"name\": \"Sonic Outlaws (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 710,\n        \"name\": \"Steal Big Steal Little (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 606,\n        \"name\": \"Sudden Death (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 739,\n        \"name\": \"The Addiction (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 733,\n        \"name\": \"The Amazing Panda Adventure (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Family|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 608,\n        \"name\": \"The American President (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 734,\n        \"name\": \"The Basketball Diaries (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 730,\n        \"name\": \"The Birdcage (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 712,\n        \"name\": \"The Boys of St. Vincent (1992)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 697,\n        \"name\": \"The Bridges of Madison County (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 731,\n        \"name\": \"The Brothers McMullen (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 626,\n        \"name\": \"The City of Lost Children (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Fantasy|Sci-Fi\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 671,\n        \"name\": \"The Crossing Guard (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 655,\n        \"name\": \"The Indian in the Cupboard (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Family|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 683,\n        \"name\": \"The Journey of August King (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 672,\n        \"name\": \"The Juror (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 728,\n        \"name\": \"The Neon Bible (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 717,\n        \"name\": \"The Neverending Story III (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 718,\n        \"name\": \"The Silences of the Palace (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 715,\n        \"name\": \"The Star Maker (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 647,\n        \"name\": \"The Usual Suspects (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 673,\n        \"name\": \"The White Balloon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 708,\n        \"name\": \"The Young Poisoner's Handbook (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 674,\n        \"name\": \"Things to Do in Denver When You're Dead (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 642,\n        \"name\": \"To Die For (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 599,\n        \"name\": \"Toy Story (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 629,\n        \"name\": \"Twelve Monkeys (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Mystery|Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 662,\n        \"name\": \"Two Bits (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 659,\n        \"name\": \"Two If by Sea (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 695,\n        \"name\": \"Unforgettable (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Mystery|Sci-Fi\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 729,\n        \"name\": \"Up Close & Personal (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 685,\n        \"name\": \"Vampire in Brooklyn (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 602,\n        \"name\": \"Waiting to Exhale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 646,\n        \"name\": \"When Night Is Falling (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 679,\n        \"name\": \"White Squall (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 630,\n        \"name\": \"Wings of Courage (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 627,\n        \"name\": \"Yao a yao, yao dao wai po qiao (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 598,\n        \"name\": \"title\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"genre\",\n        \"rating\": 5,\n        \"creator_name\": \"alikhan\"\n    }\n]"
+						},
+						{
+							"name": "Get movies by rating Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+										"type": "text"
+									},
+									{
+										"key": "genre",
+										"value": "Comedy",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/get_movies_by_genre/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"get_movies_by_genre",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 15:15:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2014"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 615,\n        \"name\": \"Four Rooms (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 660,\n        \"name\": \"Bio-Dome (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 663,\n        \"name\": \"French Twist (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 681,\n        \"name\": \"Black Sheep (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 688,\n        \"name\": \"A Midwinter's Tale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 694,\n        \"name\": \"Mr. Wrong (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 706,\n        \"name\": \"Happiness Is in the Field (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 710,\n        \"name\": \"Steal Big Steal Little (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 716,\n        \"name\": \"Flirting with Disaster (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 725,\n        \"name\": \"Down Periscope (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 730,\n        \"name\": \"The Birdcage (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 743,\n        \"name\": \"Canadian Bacon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get priemeres",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/premieres_of_the_week/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"premieres_of_the_week",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get movies by rating Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+										"type": "text"
+									},
+									{
+										"key": "genre",
+										"value": "Comedy",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/get_movies_by_genre/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"get_movies_by_genre",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 15:15:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2014"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 615,\n        \"name\": \"Four Rooms (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 660,\n        \"name\": \"Bio-Dome (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 663,\n        \"name\": \"French Twist (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 681,\n        \"name\": \"Black Sheep (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 688,\n        \"name\": \"A Midwinter's Tale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 694,\n        \"name\": \"Mr. Wrong (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 706,\n        \"name\": \"Happiness Is in the Field (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 710,\n        \"name\": \"Steal Big Steal Little (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 716,\n        \"name\": \"Flirting with Disaster (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 725,\n        \"name\": \"Down Periscope (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 730,\n        \"name\": \"The Birdcage (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 743,\n        \"name\": \"Canadian Bacon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    }\n]"
+						},
+						{
+							"name": "Get movies by rating",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/get_sorted_by_rating/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"get_sorted_by_rating",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 15:00:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26630"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 688,\n        \"name\": \"A Midwinter's Tale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 616,\n        \"name\": \"Ace Ventura: When Nature Calls (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 634,\n        \"name\": \"Across the Sea of Time (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 736,\n        \"name\": \"Amateur (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-03T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 735,\n        \"name\": \"An Awfully Big Adventure (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 721,\n        \"name\": \"Angela (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 678,\n        \"name\": \"Angels and Insects (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 707,\n        \"name\": \"Anne Frank Remembered (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 675,\n        \"name\": \"Antonia's Line (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 737,\n        \"name\": \"Apollo 13 (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 620,\n        \"name\": \"Assassins (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 631,\n        \"name\": \"Babe (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 732,\n        \"name\": \"Bad Boys (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 610,\n        \"name\": \"Balto (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 740,\n        \"name\": \"Batman Forever (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 686,\n        \"name\": \"Beautiful Girls (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 667,\n        \"name\": \"Bed of Roses (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Romance|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 704,\n        \"name\": \"Before and After (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 741,\n        \"name\": \"Belle de Jour (1967)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 742,\n        \"name\": \"Beyond Rangoon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 668,\n        \"name\": \"Big Bully (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-03T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 660,\n        \"name\": \"Bio-Dome (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 681,\n        \"name\": \"Black Sheep (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 713,\n        \"name\": \"Boomerang (1992)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 693,\n        \"name\": \"Bottle Rocket (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 702,\n        \"name\": \"Braveheart (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 687,\n        \"name\": \"Broken Arrow (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 743,\n        \"name\": \"Canadian Bacon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 632,\n        \"name\": \"Carrington (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 613,\n        \"name\": \"Casino (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 744,\n        \"name\": \"Casper (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 700,\n        \"name\": \"Catwalk (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 714,\n        \"name\": \"Chungking Express (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 692,\n        \"name\": \"City Hall (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 745,\n        \"name\": \"Clockers (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 636,\n        \"name\": \"Clueless (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 746,\n        \"name\": \"Congo (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 619,\n        \"name\": \"Copycat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 637,\n        \"name\": \"Cry, the Beloved Country (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 612,\n        \"name\": \"Cutthroat Island (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 628,\n        \"name\": \"Dangerous Minds (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 633,\n        \"name\": \"Dead Man Walking (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 639,\n        \"name\": \"Dead Presidents (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 658,\n        \"name\": \"Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 725,\n        \"name\": \"Down Periscope (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 609,\n        \"name\": \"Dracula: Dead and Loving It (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 680,\n        \"name\": \"Dunston Checks In (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Adventure|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 656,\n        \"name\": \"Eye for an Eye (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 603,\n        \"name\": \"Father of the Bride Part II (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 716,\n        \"name\": \"Flirting with Disaster (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 615,\n        \"name\": \"Four Rooms (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 722,\n        \"name\": \"Frankie Starlight (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 663,\n        \"name\": \"French Twist (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 664,\n        \"name\": \"Friday (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 665,\n        \"name\": \"From Dusk Till Dawn (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 726,\n        \"name\": \"From the Journals of Jean Seberg (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 650,\n        \"name\": \"Georgia (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 618,\n        \"name\": \"Get Shorty (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 607,\n        \"name\": \"GoldenEye (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 601,\n        \"name\": \"Grumpier Old Men (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 706,\n        \"name\": \"Happiness Is in the Field (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 696,\n        \"name\": \"Happy Gilmore (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Sport\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 701,\n        \"name\": \"Headless Body in Topless Bar (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 604,\n        \"name\": \"Heat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 691,\n        \"name\": \"Heidi Fleiss: Hollywood Madam (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 652,\n        \"name\": \"Home for the Holidays (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 643,\n        \"name\": \"How to Make an American Quilt (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 709,\n        \"name\": \"If Lucy Fell (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 653,\n        \"name\": \"Il Postino: The Postman (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 635,\n        \"name\": \"It Takes Two (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 723,\n        \"name\": \"Jade (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 600,\n        \"name\": \"Jumanji (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 719,\n        \"name\": \"Jupiter's Wife (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 666,\n        \"name\": \"Kicking and Screaming (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 651,\n        \"name\": \"Kids of the Round Table (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 689,\n        \"name\": \"La Haine (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 649,\n        \"name\": \"Lamerica (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 677,\n        \"name\": \"Last Summer in the Hamptons (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 661,\n        \"name\": \"Lawnmower Man 2: Beyond Cyberspace (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 654,\n        \"name\": \"Le confessionnal (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Mystery|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 622,\n        \"name\": \"Leaving Las Vegas (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 727,\n        \"name\": \"Man of the Year (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 705,\n        \"name\": \"Margaret's Museum (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 684,\n        \"name\": \"Mary Reilly (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Horror|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 648,\n        \"name\": \"Mighty Aphrodite (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 617,\n        \"name\": \"Money Train (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 641,\n        \"name\": \"Mortal Kombat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 657,\n        \"name\": \"Mr. Holland's Opus (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 694,\n        \"name\": \"Mr. Wrong (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 699,\n        \"name\": \"Muppet Treasure Island (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 682,\n        \"name\": \"Nick of Time (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 670,\n        \"name\": \"Nico Icon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary|Biography|Music\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 611,\n        \"name\": \"Nixon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 698,\n        \"name\": \"Nobody Loves Me (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 624,\n        \"name\": \"Now and Then (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 676,\n        \"name\": \"Once Upon a Time... When We Were Colored (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 623,\n        \"name\": \"Othello (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 625,\n        \"name\": \"Persuasion\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 720,\n        \"name\": \"Pie in the Sky (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 645,\n        \"name\": \"Pocahontas (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 621,\n        \"name\": \"Powder (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Fantasy|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 711,\n        \"name\": \"Race the Sun (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 640,\n        \"name\": \"Restoration (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Drama|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 638,\n        \"name\": \"Richard III (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-06T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|War\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 738,\n        \"name\": \"Rob Roy (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Biography|History\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 703,\n        \"name\": \"Rumble in the Bronx (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Comedy|Crime\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 605,\n        \"name\": \"Sabrina (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 669,\n        \"name\": \"Screamers (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 644,\n        \"name\": \"Se7en (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 614,\n        \"name\": \"Sense and Sensibility (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 690,\n        \"name\": \"Shopping (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 724,\n        \"name\": \"Sonic Outlaws (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Documentary\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 710,\n        \"name\": \"Steal Big Steal Little (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 606,\n        \"name\": \"Sudden Death (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 739,\n        \"name\": \"The Addiction (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 733,\n        \"name\": \"The Amazing Panda Adventure (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Family|Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 608,\n        \"name\": \"The American President (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 734,\n        \"name\": \"The Basketball Diaries (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Biography|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 730,\n        \"name\": \"The Birdcage (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 712,\n        \"name\": \"The Boys of St. Vincent (1992)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 697,\n        \"name\": \"The Bridges of Madison County (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 731,\n        \"name\": \"The Brothers McMullen (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 626,\n        \"name\": \"The City of Lost Children (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Fantasy|Sci-Fi\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 671,\n        \"name\": \"The Crossing Guard (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 655,\n        \"name\": \"The Indian in the Cupboard (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Family|Fantasy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 683,\n        \"name\": \"The Journey of August King (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 672,\n        \"name\": \"The Juror (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-20T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 728,\n        \"name\": \"The Neon Bible (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 717,\n        \"name\": \"The Neverending Story III (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Comedy|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 718,\n        \"name\": \"The Silences of the Palace (1994)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 715,\n        \"name\": \"The Star Maker (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 647,\n        \"name\": \"The Usual Suspects (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Mystery\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 673,\n        \"name\": \"The White Balloon (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-19T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 708,\n        \"name\": \"The Young Poisoner's Handbook (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-01T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 674,\n        \"name\": \"Things to Do in Denver When You're Dead (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 642,\n        \"name\": \"To Die For (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-02T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 599,\n        \"name\": \"Toy Story (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 629,\n        \"name\": \"Twelve Monkeys (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Mystery|Sci-Fi|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 662,\n        \"name\": \"Two Bits (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 659,\n        \"name\": \"Two If by Sea (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Crime|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 695,\n        \"name\": \"Unforgettable (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Mystery|Sci-Fi\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 729,\n        \"name\": \"Up Close & Personal (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 685,\n        \"name\": \"Vampire in Brooklyn (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Fantasy|Horror\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 602,\n        \"name\": \"Waiting to Exhale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-12T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 646,\n        \"name\": \"When Night Is Falling (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-18T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 679,\n        \"name\": \"White Squall (1996)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-17T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 630,\n        \"name\": \"Wings of Courage (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-11T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Adventure|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 627,\n        \"name\": \"Yao a yao, yao dao wai po qiao (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-16T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Crime|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"alikhan\"\n    },\n    {\n        \"id\": 598,\n        \"name\": \"title\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-09T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"genre\",\n        \"rating\": 5,\n        \"creator_name\": \"alikhan\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Rate films",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"movie_id\": 598,\n    \"rating\": 5\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/rate/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"rate",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Rate films",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n    \"movie_id\": 598,\n    \"rating\": 5\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/rate/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"rate",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 15:02:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 598,\n    \"name\": \"title\",\n    \"price\": 1000,\n    \"premiere\": \"2020-04-09T00:00:00Z\",\n    \"country\": \"Kazakhstan\",\n    \"genre\": \"genre\",\n    \"rating\": 5,\n    \"creator_name\": \"alikhan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Rate films Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"movie_id\": 598,\n    \"rating\": 5\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/movies/rate/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movies",
+								"rate",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Rate films",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n    \"movie_id\": 598,\n    \"rating\": 5\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/rate/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"rate",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 15:02:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 598,\n    \"name\": \"title\",\n    \"price\": 1000,\n    \"premiere\": \"2020-04-09T00:00:00Z\",\n    \"country\": \"Kazakhstan\",\n    \"genre\": \"genre\",\n    \"rating\": 5,\n    \"creator_name\": \"alikhan\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"qweqwe6\",\n\t\"email\" : \"should_validate@gmail.com\",\n\t\"first_name\" : \"myfirstname\",\n\t\"last_name\" : \"mylastname\",\n\t\"password\" : \"uljanek06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}auth/register/",
+							"host": [
+								"{{BASE_URL}}auth"
+							],
+							"path": [
+								"register",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"aida1\",\n\t\"email\" : \"should_validate@gmail.com\",\n\t\"first_name\" : \"myfirstname\",\n\t\"last_name\" : \"mylastname\",\n\t\"password\" : \"uljanek06\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}auth/register/",
+									"host": [
+										"{{BASE_URL}}auth"
+									],
+									"path": [
+										"register",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 14:49:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"aida1\",\n    \"email\": \"should_validate@gmail.com\",\n    \"date_joined\": \"2020-04-19T14:49:46.184450Z\",\n    \"isAdmin\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9343c88a-e6ee-4116-b182-ec9d2b65de98",
+								"exec": [
+									"var data = pm.response.json();",
+									"pm.environment.set('token', data.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"aida\",\n\t\"password\" : \"Uljanek06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}auth/login/",
+							"host": [
+								"{{BASE_URL}}auth"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"aida\",\n\t\"password\" : \"Uljanek06\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}auth/login/",
+									"host": [
+										"{{BASE_URL}}auth"
+									],
+									"path": [
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 14:50:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "185"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
