@@ -3,6 +3,7 @@ import operator
 import pandas as pd
 import numpy as np
 
+from scipy.spatial import distance
 from rest_framework import viewsets
 from rest_framework import mixins
 from rest_framework.decorators import action
@@ -156,7 +157,7 @@ class MovieViewSet(viewsets.ModelViewSet):
         print(df.shape)
         current_user_id = request.user.id
         logger.info('received request: recommend with user_id %s', current_user_id)
-        prediction_matrix, Ymean = recommendation.recommender()
+        prediction_matrix, Ymean, predicted_X = recommendation.recommender()
         prediction_for_user = prediction_matrix[:, current_user_id - 1] + Ymean.flatten()
 
         pred_idxs_sorted = np.argsort(prediction_for_user)
@@ -168,6 +169,17 @@ class MovieViewSet(viewsets.ModelViewSet):
 
         serializer = MovieSerializer(predicted_movies, many=True)
         return Response(serializer.data)
+
+    @action(methods=['GET'], detail=False)
+    def get_similar(self, request):
+        movie_id = int(request.query_params.get('movie_id'))
+        sorted_movies = get_similar_movie_ids(movie_id)
+        sorted_movies = [movie.movie_id for movie in sorted_movies]
+        sorted_movies = sorted_movies[:5]
+        movies = Movie.objects.filter(movie_id__in=sorted_movies)
+        serializer = MovieSerializer(movies, many=True)
+        return Response(serializer.data)
+
 
     @action(methods=['GET'], detail=False)
     def fill_ratings(self, request):
@@ -184,6 +196,14 @@ class MovieViewSet(viewsets.ModelViewSet):
                 Myrating.objects.create(user=user, movie=movie, rating=rating)
         return Response("OK")
 
+
+def get_similar_movie_ids(movie_id):
+    prediction_matrix, Ymean, predicted_X = recommendation.recommender()
+    movies = Movie.objects.all()
+    current_movie_features = predicted_X[movie_id - 1, :]
+    sorted_movies = sorted(movies, key=lambda movie: distance.euclidean(current_movie_features,
+                                                                        predicted_X[movie.movie_id - 1, :]))
+    return sorted_movies
 
 def csv_reader(file_obj, user):
     """
