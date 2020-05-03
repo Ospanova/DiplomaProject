@@ -51,7 +51,7 @@ def recommender():
         Y_err = (Y_est - Y) * R
 
         #cost_function
-        J = 0.5 * np.sum(np.square(Y_err - Y))
+        J = 0.5 * np.sum(np.square(Y_err))
 
         # for regularization
         J += (lambd / 2.) * (np.sum(np.square(Theta)) + np.sum(np.square(X)))
@@ -82,36 +82,37 @@ def recommender():
     number_of_movies = df.movie_id.unique().shape[0]
     number_of_features = 10
 
-    Y = np.zeros((number_of_movies, number_of_users))
+    Y_cur = np.zeros((number_of_movies, number_of_users))
     for row in df.itertuples():
         #movie = Movie.objects.get(id=row[2])
         #m_id = movie.movie_id
-        Y[row[2] - 1, row[4] - 1] = row[3]
+        Y_cur[row[2] - 1, row[4] - 1] = row[3]
 
-    R = np.zeros((number_of_movies, number_of_users))
-    for i in range(Y.shape[0]):
-        for j in range(Y.shape[1]):
-            if Y[i][j] != 0:
-                R[i][j] = 1
+    R_cur = np.zeros((number_of_movies, number_of_users))
+    for i in range(Y_cur.shape[0]):
+        for j in range(Y_cur.shape[1]):
+            if Y_cur[i][j] != 0:
+                R_cur[i][j] = 1
 
-    Ynorm, Ymean = normalize_ratings(Y, R)
+    Ynorm, Ymean = normalize_ratings(Y_cur, R_cur)
 
 
     # Give small random initial values to X and Theta
-    X = np.random.rand(number_of_movies, number_of_features)
-    Theta = np.random.rand(number_of_users, number_of_features)
+    X_cur = np.random.rand(number_of_movies, number_of_features)
+    Theta_cur = np.random.rand(number_of_users, number_of_features)
 
     # get params for cost function J(X(1), X(2), ... , X(number_of_movies), Theta(1), Theta(2), ..., Theta(number_of_users))
-    params = flatten_params(X, Theta)
+    params = flatten_params(X_cur, Theta_cur)
 
     # set lambda
     lambd = 12.2
     result = scipy.optimize.fmin_cg(cofi_cost_func, x0=params, fprime=cofi_grad,
-                                    args=(Y, R, number_of_users, number_of_movies,
-                                    number_of_features, lambd),maxiter=40, disp=True, full_output=True)
+                                    args=(Y_cur, R_cur, number_of_users, number_of_movies,
+                                    number_of_features, lambd),maxiter=100, disp=True, full_output=True)
+
 
     predicted_X, predicted_Theta = reshape_params(result[0], number_of_movies, number_of_users, number_of_features)
 
     prediction_matrix = predicted_X.dot(predicted_Theta.T)
 
-    return prediction_matrix, Ymean
+    return prediction_matrix, Ymean, predicted_X
