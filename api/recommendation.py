@@ -39,7 +39,7 @@ def recommender():
 
         return X, Theta
 
-    def cofi_cost_func(params, Y, R, number_of_users, number_of_movies, number_of_features, lambd=0.):
+    def cofi_cost_func(params, Y, R, number_of_users, number_of_movies, number_of_features, lambd):
         """
         1) computing the estimated rating for all pairs (user, movie)
         2) computing the difference = estimated - real_rating for movies that are rated
@@ -57,7 +57,7 @@ def recommender():
         J += (lambd / 2.) * (np.sum(np.square(Theta)) + np.sum(np.square(X)))
         return J
 
-    def cofi_grad(myparams, Y, R, number_of_users, number_of_movies, number_of_features, lambd=0.):
+    def cofi_grad(myparams, Y, R, number_of_users, number_of_movies, number_of_features, lambd):
         """
         Note that the function returns the gradient for both sets of variables by unrolling them into a single vector
         """
@@ -105,10 +105,10 @@ def recommender():
     params = flatten_params(X_cur, Theta_cur)
 
     # set lambda
-    lambd = 12.2
+    lambd = 0.0000000000001
     result = scipy.optimize.fmin_cg(cofi_cost_func, x0=params, fprime=cofi_grad,
                                     args=(Y_cur, R_cur, number_of_users, number_of_movies,
-                                    number_of_features, lambd),maxiter=100, disp=True, full_output=True)
+                                    number_of_features, lambd),maxiter=None, disp=True, full_output=True)
 
 
     predicted_X, predicted_Theta = reshape_params(result[0], number_of_movies, number_of_users, number_of_features)
