@@ -60,3 +60,13 @@ class MovieFullSerializer(MovieSerializer):
 
     class Meta(MovieSerializer.Meta):
         fields = MovieSerializer.Meta.fields + ('description', 'images')
+
+
+class BaseCommentSerializer(serializers.ModelSerializer):
+    movie = MovieSerializer
+
+    class Meta:
+        model = Comment
+        fields = ('id', 'movie', 'reply_to', 'created_by', 'created_at', 'content')
+        read_only_fields = ('id', 'created_by', 'created_at')
+

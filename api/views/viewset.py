@@ -25,7 +25,6 @@ import csv
 import random
 from datetime import datetime, timedelta, timezone
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -180,7 +179,6 @@ class MovieViewSet(viewsets.ModelViewSet):
         serializer = MovieSerializer(movies, many=True)
         return Response(serializer.data)
 
-
     @action(methods=['GET'], detail=False)
     def fill_ratings(self, request):
         csv_path = "/Users/aida/Downloads/cinema 2/api/views/web_myrating.csv"
@@ -205,6 +203,7 @@ def get_similar_movie_ids(movie_id):
                                                                         predicted_X[movie.movie_id - 1, :]))
     return sorted_movies
 
+
 def csv_reader(file_obj, user):
     """
     Read a csv file
@@ -220,10 +219,27 @@ def csv_reader(file_obj, user):
         start = datetime(2020, 4, 1, tzinfo=timezone.utc)
         end = datetime(2020, 4, 20, tzinfo=timezone.utc)
         random_date = start + random.randrange((end - start) // step + 1) * step
-        Movie.objects.create(movie_id=movie_id,name=title, genre=genre, movie_logo=movie_logo, creator=user, premiere=random_date)
+        Movie.objects.create(movie_id=movie_id, name=title, genre=genre, movie_logo=movie_logo, creator=user,
+                             premiere=random_date)
 
 
+class CommentListViewSet(mixins.RetrieveModelMixin,
+                         viewsets.GenericViewSet):
+    queryset = Comment.comments.all()
+    serializer_class = BaseCommentSerializer
+
+    @action(methods=['get'], detail=True)
+    def comment_to_movie(self, request, pk):
+        comments = Comment.comments.filter(movie=pk)
+        serializer = self.get_serializer(comments, many=True)
+        return Response(serializer.data)
 
 
+class CommentViewSet(viewsets.ModelViewSet):
+    serializer_class = BaseCommentSerializer
 
+    def get_queryset(self):
+        return Comment.comments.filter(created_by=self.request.user)
 
+    def perform_create(self, serializer):
+        return serializer.save(created_by=self.request.user)
