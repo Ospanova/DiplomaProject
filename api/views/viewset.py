@@ -35,9 +35,7 @@ class MovieImageViewSet(viewsets.ModelViewSet):
     def get_permissions(self):
         if self.action in ['create', 'update', 'destroy']:
             return [IsAdminUser()]
-        if self.action in ['list', 'retrieve']:
-            return [IsAuthenticatedOrReadOnly()]
-        return [IsAdminUser()]
+        return [IsAuthenticatedOrReadOnly()]
 
 
 class MovieViewSet(viewsets.ModelViewSet):
@@ -221,9 +219,9 @@ def csv_reader(file_obj, user):
 
 
 class CommentListViewSet(mixins.RetrieveModelMixin,
-                         viewsets.GenericViewSet):
-    queryset = Comment.comments.all()
+                               viewsets.GenericViewSet):
     serializer_class = BaseCommentSerializer
+    permission_classes = (IsAuthenticated, )
 
     @action(methods=['get'], detail=True)
     def comment_to_movie(self, request, pk):
