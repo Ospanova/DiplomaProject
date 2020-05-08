@@ -42,7 +42,6 @@ class MovieImageViewSet(viewsets.ModelViewSet):
 
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
-    permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
@@ -52,9 +51,7 @@ class MovieViewSet(viewsets.ModelViewSet):
     def get_permissions(self):
         if self.action in ['create', 'update', 'destroy']:
             return [IsAdminUser()]
-        if self.action in ['list', 'retrieve']:
-            return [IsAuthenticatedOrReadOnly()]
-        return [IsAdminUser()]
+        return [IsAuthenticatedOrReadOnly()]
 
     @action(methods=['GET', 'POST'], detail=False)
     def favorite(self, request):

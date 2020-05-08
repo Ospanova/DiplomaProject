@@ -9,3 +9,5 @@ admin.site.register(FavoriteMovie)
 
 admin.site.register(Myrating)
 
+admin.site.register(Comment)
+

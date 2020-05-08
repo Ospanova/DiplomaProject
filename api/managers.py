@@ -6,9 +6,9 @@ class CommentManager(models.Manager):
         return super().get_queryset().order_by('-created_date').filter(movie=movie)
 
 
-class MovieLikeManager(models.Manager):
-    def get_movie_likes(self, movie):
-        return movie.movie_likes.all()
+# class MovieLikeManager(models.Manager):
+#     def get_movie_likes(self, movie):
+#         return movie.movie_likes.all()
 
 
 class CommentLikeManager(models.Manager):

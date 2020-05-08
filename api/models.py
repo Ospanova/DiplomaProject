@@ -1,6 +1,6 @@
 from django.db import models
 
-from api.managers import CommentManager, MovieLikeManager, CommentLikeManager
+from api.managers import CommentManager, CommentLikeManager
 from auth1.models import MainUser
 from utils.constants import *
 from utils.upload import *
@@ -64,10 +64,10 @@ class Comment(models.Model):
         return f'{self.created_by}: {self.movie}'
 
 
-class PostLike(models.Model):
+class MovieLike(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='movie_likes')
     user = models.ForeignKey(MainUser, on_delete=models.CASCADE)
-    likes = MovieLikeManager()
+    # likes = MovieLikeManager()
 
     def __str__(self):
         return f'{self.created_by}: {self.movie}'

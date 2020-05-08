@@ -728,3 +728,9 @@ INFO -- 2020-04-20 15:11:04,124 -- received request: recommend with user_id 4
 INFO -- 2020-04-20 15:12:04,309 -- received request: recommend with user_id 4
 INFO -- 2020-04-20 15:13:15,900 -- received request: recommend with user_id 4
 INFO -- 2020-04-20 15:17:16,588 -- received request: recommend with user_id 4
+INFO -- 2020-05-08 17:19:51,423 -- received request: set rating from user 32: qweqwe8
+INFO -- 2020-05-08 17:20:25,041 -- received request: set rating from user 32: qweqwe8
+INFO -- 2020-05-08 17:21:06,014 -- received request: set rating from user 32: qweqwe8
+INFO -- 2020-05-08 17:21:18,466 -- received fovorite request
+INFO -- 2020-05-08 17:26:38,182 -- received request: set rating from user 32: qweqwe8
+INFO -- 2020-05-08 17:26:45,962 -- received fovorite request
