@@ -219,9 +219,8 @@ def csv_reader(file_obj, user):
 
 
 class CommentListViewSet(mixins.RetrieveModelMixin,
-                               viewsets.GenericViewSet):
+                         viewsets.GenericViewSet):
     serializer_class = BaseCommentSerializer
-    permission_classes = (IsAuthenticated, )
 
     @action(methods=['get'], detail=True)
     def comment_to_movie(self, request, pk):
@@ -232,9 +231,54 @@ class CommentListViewSet(mixins.RetrieveModelMixin,
 
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = BaseCommentSerializer
+    permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         return Comment.comments.filter(created_by=self.request.user)
 
     def perform_create(self, serializer):
         return serializer.save(created_by=self.request.user)
+
+
+class MovieLikeListViewSet(mixins.RetrieveModelMixin,
+                           viewsets.GenericViewSet):
+    serializer_class = BaseMovieLikeSerializer
+
+    @action(methods=['get'], detail=True)
+    def like_to_movie(self, request, pk):
+        likes = MovieLike.likes.filter(movie=pk)
+        serializer = self.get_serializer(likes, many=True)
+        return Response(serializer.data)
+
+
+class MovieLikeViewSet(viewsets.ModelViewSet):
+    serializer_class = BaseMovieLikeSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def get_queryset(self):
+        return MovieLike.likes.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        return serializer.save(user=self.request.user)
+
+
+class CommentLikeListViewSet(mixins.RetrieveModelMixin,
+                           viewsets.GenericViewSet):
+    serializer_class = BaseCommentLikeSerializer
+
+    @action(methods=['get'], detail=True)
+    def like_to_comment(self, request, pk):
+        likes = CommentLike.likes.filter(comment=pk)
+        serializer = self.get_serializer(likes, many=True)
+        return Response(serializer.data)
+
+
+class CommentLikeViewSet(viewsets.ModelViewSet):
+    serializer_class = BaseCommentLikeSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def get_queryset(self):
+        return CommentLike.likes.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        return serializer.save(user=self.request.user)

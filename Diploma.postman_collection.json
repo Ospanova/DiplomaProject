@@ -14,11 +14,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}api/movies/",
+							"raw": "64.227.35.199:8000/api/movies/",
 							"host": [
-								"{{BASE_URL}}api"
+								"64",
+								"227",
+								"35",
+								"199"
 							],
+							"port": "8000",
 							"path": [
+								"api",
 								"movies",
 								""
 							]
@@ -143,7 +148,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODIyMTc5LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.2ZCx_BzpVuA7_o1fkj0vTzAycIIzUGRwWm0HbNb2I0U",
 								"type": "text"
 							}
 						],
@@ -169,15 +174,169 @@
 							{
 								"key": "Authorization",
 								"type": "text",
-								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgyMzY0NjYsImVtYWlsIjoicnJAbWFpbC5ydSJ9.3umkEkvGyOc-uPPWWfOCx0Yrqm2U9cPt3KxH7Uo5GLs"
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODg4NDA2MTYsImVtYWlsIjoicnJAbWFpbC5ydSJ9.2-m4rdelFnDMuSU7gg_N3GL54yrijiXytlsDlkkMMiw"
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}api/movies/recommend/",
+							"raw": "64.227.35.199:8000/api/movies/recommend/",
 							"host": [
-								"{{BASE_URL}}api"
+								"64",
+								"227",
+								"35",
+								"199"
 							],
+							"port": "8000",
 							"path": [
+								"api",
+								"movies",
+								"recommend",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get recommend",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/recommend/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"recommend",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 Apr 2020 20:44:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "Get recommend",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgyMzY0NjYsImVtYWlsIjoicnJAbWFpbC5ydSJ9.3umkEkvGyOc-uPPWWfOCx0Yrqm2U9cPt3KxH7Uo5GLs"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/movies/recommend/",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"movies",
+										"recommend",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 08:47:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1912"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1192,\n        \"movie_id\": 1,\n        \"name\": \"Toy Story (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-15T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Animation|Adventure|Comedy\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1193,\n        \"movie_id\": 2,\n        \"name\": \"Jumanji (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-07T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Family\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1194,\n        \"movie_id\": 3,\n        \"name\": \"Grumpier Old Men (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-08T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1195,\n        \"movie_id\": 4,\n        \"name\": \"Waiting to Exhale (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-05T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1196,\n        \"movie_id\": 5,\n        \"name\": \"Father of the Bride Part II (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-14T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Family|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1197,\n        \"movie_id\": 6,\n        \"name\": \"Heat (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1198,\n        \"movie_id\": 7,\n        \"name\": \"Sabrina (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-04T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1199,\n        \"movie_id\": 8,\n        \"name\": \"Sudden Death (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Crime|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1200,\n        \"movie_id\": 9,\n        \"name\": \"GoldenEye (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-13T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Action|Adventure|Thriller\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    },\n    {\n        \"id\": 1201,\n        \"movie_id\": 10,\n        \"name\": \"The American President (1995)\",\n        \"price\": 1000,\n        \"premiere\": \"2020-04-10T00:00:00Z\",\n        \"country\": \"Kazakhstan\",\n        \"genre\": \"Comedy|Drama|Romance\",\n        \"rating\": 0,\n        \"creator_name\": \"aida\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get recommend inner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgyNTgzMDMsImVtYWlsIjoicnJAbWFpbC5ydSJ9.4JqAkmnGyo1b3a546tgaVlE675fGe_Wc0ojl79xrjYo"
+							}
+						],
+						"url": {
+							"raw": "64.227.35.199:8000/api/movies/recommend/",
+							"host": [
+								"64",
+								"227",
+								"35",
+								"199"
+							],
+							"port": "8000",
+							"path": [
+								"api",
 								"movies",
 								"recommend",
 								""
@@ -317,11 +476,16 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}api/movies/get_sorted_by_rating/",
+							"raw": "64.227.35.199:8000/api/movies/get_sorted_by_rating/",
 							"host": [
-								"{{BASE_URL}}api"
+								"64",
+								"227",
+								"35",
+								"199"
 							],
+							"port": "8000",
 							"path": [
+								"api",
 								"movies",
 								"get_sorted_by_rating",
 								""
@@ -407,11 +571,16 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}api/movies/get_sorted_by_rating/",
+							"raw": "64.227.35.199:8000/api/movies/get_sorted_by_rating/",
 							"host": [
-								"{{BASE_URL}}api"
+								"64",
+								"227",
+								"35",
+								"199"
 							],
+							"port": "8000",
 							"path": [
+								"api",
 								"movies",
 								"get_sorted_by_rating",
 								""
@@ -556,11 +725,16 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}api/movies/premieres_of_the_week/",
+							"raw": "64.227.35.199:8000/api/movies/premieres_of_the_week/",
 							"host": [
-								"{{BASE_URL}}api"
+								"64",
+								"227",
+								"35",
+								"199"
 							],
+							"port": "8000",
 							"path": [
+								"api",
 								"movies",
 								"premieres_of_the_week",
 								""
@@ -706,7 +880,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "\n{\n    \"movie_id\": 598,\n    \"rating\": 5\n}\n",
+							"raw": "\n{\n    \"movie_id\": 1,\n    \"rating\": 5\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -714,11 +888,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE_URL}}api/movies/rate/",
+							"raw": "64.227.35.199:8000/api/movies/rate/",
 							"host": [
-								"{{BASE_URL}}api"
+								"64",
+								"227",
+								"35",
+								"199"
 							],
+							"port": "8000",
 							"path": [
+								"api",
 								"movies",
 								"rate",
 								""
@@ -919,7 +1098,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"username\" : \"qweqwe6\",\n\t\"email\" : \"should_validate@gmail.com\",\n\t\"first_name\" : \"myfirstname\",\n\t\"last_name\" : \"mylastname\",\n\t\"password\" : \"uljanek06\"\n}",
+							"raw": "{\n\t\"username\" : \"qweqwe8\",\n\t\"email\" : \"should_validate@gmail.com\",\n\t\"first_name\" : \"myfirstname\",\n\t\"last_name\" : \"mylastname\",\n\t\"password\" : \"uljanek06\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1035,7 +1214,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"username\" : \"aida\",\n\t\"password\" : \"Uljanek06\"\n}",
+							"raw": "{\n\t\"username\" : \"qweqwe8\",\n\t\"password\" : \"uljanek06\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1123,6 +1302,378 @@
 							"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6ImFpZGEiLCJleHAiOjE1ODgxNzE4MjAsImVtYWlsIjoicnJAbWFpbC5ydSJ9.knUTk1qanXLPXBqzQOVWHVPSw8tC2ppHO7Cg5B_V4wI\"\n}"
 						}
 					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "get comments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/comments/1199/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comments",
+								"1199",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comments Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/comments/1199/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comments",
+								"1199",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/comment/2/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comment",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie\" : 1199,\n\t\"reply_to\": 32\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/comment/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie\" : 1199,\n\t\"reply_to\": 32,\n\t\"content\": \"Boring!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/comment/3/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comment",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie\" : 1199,\n\t\"reply_to\": 32,\n\t\"content\": \"Boring!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/comment/3/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comment",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "get movies likes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/movie_likes/1199/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movie_likes",
+								"1199",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comment likes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/comment_likes/4/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comment_likes",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create movie like",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie\" : 1199\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/movie_like/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movie_like",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create comment like",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\" : 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/comment_like/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comment_like",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete movie like",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie\" : 1199\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/movie_like/1/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"movie_like",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment like",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMiwidXNlcm5hbWUiOiJxd2Vxd2U4IiwiZXhwIjoxNTg5ODI1MDg1LCJlbWFpbCI6InNob3VsZF92YWxpZGF0ZUBnbWFpbC5jb20ifQ.BVUXt5ONUHVfOwu5wM7Pe0BzGOVnCj6L133PkTxxSqQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie\" : 1199\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/comment_like/1/",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"comment_like",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

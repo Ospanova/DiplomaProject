@@ -70,3 +70,20 @@ class BaseCommentSerializer(serializers.ModelSerializer):
         fields = ('id', 'movie', 'reply_to', 'created_by', 'created_at', 'content')
         read_only_fields = ('id', 'created_by', 'created_at')
 
+
+class BaseMovieLikeSerializer(serializers.ModelSerializer):
+    movie = MovieSerializer
+
+    class Meta:
+        model = MovieLike
+        fields = ('id', 'movie', 'user')
+        read_only_fields = ('id', 'user')
+
+
+class BaseCommentLikeSerializer(serializers.ModelSerializer):
+    comment = BaseCommentSerializer
+
+    class Meta:
+        model = CommentLike
+        fields = ('id', 'comment', 'user')
+        read_only_fields = ('id', 'user')

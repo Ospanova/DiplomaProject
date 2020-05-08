@@ -6,11 +6,11 @@ class CommentManager(models.Manager):
         return super().get_queryset().order_by('-created_date').filter(movie=movie)
 
 
-# class MovieLikeManager(models.Manager):
-#     def get_movie_likes(self, movie):
-#         return movie.movie_likes.all()
+class MovieLikeManager(models.Manager):
+    def get_movie_likes(self, movie):
+        return super().get_queryset().filter(movie=movie)
 
 
 class CommentLikeManager(models.Manager):
     def get_comment_like(self, comment):
-        return comment.comment_likes.all()
+        return super().get_queryset().filter(comment=comment)
