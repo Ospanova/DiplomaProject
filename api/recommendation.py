@@ -2,6 +2,10 @@ import numpy as np
 import pandas as pd
 import scipy.optimize
 
+from sklearn.metrics.pairwise import cosine_similarity
+
+from scipy.spatial import distance
+
 from api.models import Myrating, Movie
 
 
@@ -105,7 +109,7 @@ def recommender():
     params = flatten_params(X_cur, Theta_cur)
 
     # set lambda
-    lambd = 0.0000000000001
+    lambd = 0.00000001
     result = scipy.optimize.fmin_cg(cofi_cost_func, x0=params, fprime=cofi_grad,
                                     args=(Y_cur, R_cur, number_of_users, number_of_movies,
                                     number_of_features, lambd),maxiter=None, disp=True, full_output=True)
@@ -116,3 +120,24 @@ def recommender():
     prediction_matrix = predicted_X.dot(predicted_Theta.T)
 
     return prediction_matrix, Ymean, predicted_X
+
+
+def get_similar_content_based_movies(movie_id, matrixX):
+    """
+    We use cosine similarity
+    which is a measure of similarity between
+    two non-zero vectors of an inner product space
+    that measures the cosine of the angle between them
+    """
+    movies = Movie.objects.all()
+    cosine_sim = cosine_similarity(matrixX, matrixX)
+
+    # getting similars for a given movie
+    sim_scores = list(enumerate(cosine_sim[movie_id - 1]))
+
+    # sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    # current_movie_features = matrixX[movie_id - 1, :]
+
+    # sort them by minus cosine of the angle between them = -cosine(given movie, movid_id)
+    sorted_movies = sorted(movies, key=lambda movie: -sim_scores[movie.movie_id - 1][1])
+    return sorted_movies

@@ -167,7 +167,8 @@ class MovieViewSet(viewsets.ModelViewSet):
     @action(methods=['GET'], detail=False)
     def get_similar(self, request):
         movie_id = int(request.query_params.get('movie_id'))
-        sorted_movies = get_similar_movie_ids(movie_id)
+        prediction_matrix, Ymean, predicted_X = recommendation.recommender()
+        sorted_movies = recommendation.get_similar_content_based_movies(movie_id, predicted_X)
         sorted_movies = [movie.movie_id for movie in sorted_movies]
         sorted_movies = sorted_movies[:5]
         movies = Movie.objects.filter(movie_id__in=sorted_movies)
@@ -190,13 +191,13 @@ class MovieViewSet(viewsets.ModelViewSet):
         return Response("OK")
 
 
-def get_similar_movie_ids(movie_id):
-    prediction_matrix, Ymean, predicted_X = recommendation.recommender()
-    movies = Movie.objects.all()
-    current_movie_features = predicted_X[movie_id - 1, :]
-    sorted_movies = sorted(movies, key=lambda movie: distance.euclidean(current_movie_features,
-                                                                        predicted_X[movie.movie_id - 1, :]))
-    return sorted_movies
+# def get_similar_movie_ids(movie_id):
+#     prediction_matrix, Ymean, predicted_X = recommendation.recommender()
+#     movies = Movie.objects.all()
+#     current_movie_features = predicted_X[movie_id - 1, :]
+#     sorted_movies = sorted(movies, key=lambda movie: distance.euclidean(current_movie_features,
+#                                                                         predicted_X[movie.movie_id - 1, :]))
+#     return sorted_movies
 
 
 def csv_reader(file_obj, user):
