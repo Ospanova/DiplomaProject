@@ -734,3 +734,5 @@ INFO -- 2020-05-08 17:21:06,014 -- received request: set rating from user 32: qw
 INFO -- 2020-05-08 17:21:18,466 -- received fovorite request
 INFO -- 2020-05-08 17:26:38,182 -- received request: set rating from user 32: qweqwe8
 INFO -- 2020-05-08 17:26:45,962 -- received fovorite request
+INFO -- 2020-05-12 09:03:05,282 -- received request: recommend with user_id 32
+INFO -- 2020-05-12 09:07:58,123 -- received request: recommend with user_id 32

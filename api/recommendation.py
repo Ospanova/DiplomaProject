@@ -88,9 +88,9 @@ def recommender():
 
     Y_cur = np.zeros((number_of_movies, number_of_users))
     for row in df.itertuples():
-        #movie = Movie.objects.get(id=row[2])
-        #m_id = movie.movie_id
-        Y_cur[row[2] - 1, row[4] - 1] = row[3]
+        movie = Movie.objects.get(id=row[2])
+        m_id = movie.movie_id
+        Y_cur[m_id - 1, row[4] - 1] = row[3]
 
     R_cur = np.zeros((number_of_movies, number_of_users))
     for i in range(Y_cur.shape[0]):
