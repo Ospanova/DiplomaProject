@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from scipy.spatial import distance
 
-from api.models import Myrating, Movie
+from api.models import Myrating, Movie, MainUser
 
 
 def recommender():
@@ -82,8 +82,8 @@ def recommender():
 
     df = pd.DataFrame(list(Myrating.objects.all().values()))
 
-    number_of_users = df.user_id.unique().shape[0]
-    number_of_movies = df.movie_id.unique().shape[0]
+    number_of_users = len(MainUser.objects.all().distinct())
+    number_of_movies = len(Movie.objects.all().distinct())
     number_of_features = 10
 
     Y_cur = np.zeros((number_of_movies, number_of_users))
