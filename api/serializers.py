@@ -17,7 +17,8 @@ class MovieSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = ('id','movie_id', 'name', 'price', 'premiere', 'creator', 'country', 'genre' , 'rating', 'images_uploaded', 'creator_name')
+        fields = ('id','movie_id', 'name', 'price', 'premiere', 'creator', 'country', 'genre' ,
+                  'rating', 'images_uploaded', 'creator_name', 'movie_logo')
 
     def get_creator_name(self, obj):
         if obj.creator is not None:
