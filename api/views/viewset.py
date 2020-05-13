@@ -166,7 +166,8 @@ class MovieViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET'], detail=False)
     def get_similar(self, request):
-        movie_id = int(request.query_params.get('movie_id'))
+        movie = Movie.objects.get(id=int(request.query_params.get('id')))
+        movie_id = movie.movie_id
         prediction_matrix, Ymean, predicted_X = recommendation.recommender()
         sorted_movies = recommendation.get_similar_content_based_movies(movie_id, predicted_X)
         sorted_movies = [movie.movie_id for movie in sorted_movies]
