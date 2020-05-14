@@ -763,3 +763,23 @@ INFO -- 2020-05-14 04:32:06,814 -- received fovorite request
 INFO -- 2020-05-14 04:33:26,325 -- received fovorite request
 INFO -- 2020-05-14 04:33:54,067 -- received fovorite request
 INFO -- 2020-05-14 04:37:15,746 -- received fovorite request
+INFO -- 2020-05-14 11:53:08,827 -- received request: get list sorted by rating by user AnonymousUser
+INFO -- 2020-05-14 11:54:01,489 -- received request: recommend with user_id 32
+INFO -- 2020-05-14 12:10:55,100 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-05-14 12:11:15,478 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-05-14 12:12:28,353 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-05-14 12:13:17,434 -- received request: recommend with user_id 4
+INFO -- 2020-05-14 12:14:19,669 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-05-14 12:14:19,896 -- received request: recommend with user_id 4
+INFO -- 2020-05-14 12:14:43,501 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-05-14 12:14:43,546 -- received request: recommend with user_id 4
+INFO -- 2020-05-14 12:16:30,106 -- received request: get list sorted by rating by user AnonymousUser
+INFO -- 2020-05-14 12:16:30,127 -- received request: recommend with user_id None
+INFO -- 2020-05-14 12:17:28,285 -- received request: get list sorted by rating by user AnonymousUser
+INFO -- 2020-05-14 12:25:19,403 -- received request: get list sorted by rating by user AnonymousUser
+INFO -- 2020-05-14 12:25:24,325 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-05-14 12:25:24,517 -- received request: recommend with user_id 4
+INFO -- 2020-05-14 12:25:44,464 -- received request: get list sorted by rating by user 4: aida
+INFO -- 2020-05-14 12:25:44,487 -- received request: recommend with user_id 4
+INFO -- 2020-05-14 12:31:00,310 -- received request: recommend with user_id 4
+INFO -- 2020-05-14 12:32:15,118 -- received request: recommend with user_id 4

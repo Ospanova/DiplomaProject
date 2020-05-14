@@ -27,6 +27,7 @@ import random
 from datetime import datetime, timedelta, timezone
 
 logger = logging.getLogger(__name__)
+recommendation_dict = dict()
 
 
 class MovieImageViewSet(viewsets.ModelViewSet):
@@ -40,7 +41,23 @@ class MovieImageViewSet(viewsets.ModelViewSet):
 
 
 class MovieViewSet(viewsets.ModelViewSet):
-    queryset = Movie.objects.all()
+    queryset = Movie.objects.order_by('-rating')
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(queryset, many=True)
+        current_user_id = request.user.id
+        # if current_user_id is not None:
+        #     n = recommend_async.delay(current_user_id)
+        #     recommendation_dict[current_user_id] = n.get()
+
+        return Response(serializer.data)
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
@@ -55,9 +72,6 @@ class MovieViewSet(viewsets.ModelViewSet):
     @action(methods=['GET', 'POST'], detail=False)
     def favorite(self, request):
         logger.info('received fovorite request')
-        # n = send_post_signup.delay()
-        # print("IDDD")
-        # print(n.get())
         if request.method == 'GET':
             fav_movies = request.user.favorite_movies.all()
             movies = Movie.objects.filter(id__in=fav_movies.values('movie_id'))
@@ -98,6 +112,10 @@ class MovieViewSet(viewsets.ModelViewSet):
         movies = Movie.objects.order_by('-rating')
         ordered = sorted(movies, key=operator.attrgetter('name'))
         serializer = MovieSerializer(ordered, many=True)
+        current_user_id = request.user.id
+        if current_user_id is not None:
+            n = recommend_async.delay(current_user_id)
+            recommendation_dict[current_user_id] = n.get()
         return Response(serializer.data)
 
     @action(methods=['GET'], detail=False)
@@ -154,6 +172,9 @@ class MovieViewSet(viewsets.ModelViewSet):
         df = pd.DataFrame(list(Myrating.objects.all().values()))
         print(df.shape)
         current_user_id = request.user.id
+        if current_user_id in recommendation_dict.keys():
+            print("Already known info")
+            return Response(recommendation_dict[current_user_id])
         logger.info('received request: recommend with user_id %s', current_user_id)
         prediction_matrix, Ymean, predicted_X = recommendation.recommender()
         prediction_for_user = prediction_matrix[:, current_user_id - 1] + Ymean.flatten()
