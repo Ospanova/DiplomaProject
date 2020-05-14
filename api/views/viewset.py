@@ -169,11 +169,47 @@ class MovieViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     @action(methods=['GET'], detail=False)
-    def get_similar(self, request):
+    def get_similar_by_user_ratings(self, request):
         movie = Movie.objects.get(id=int(request.query_params.get('id')))
         movie_id = movie.movie_id
+        logger.info('received get similar movies by user ratings request for movie with movie_id %s', movie_id)
+
         prediction_matrix, Ymean, predicted_X = recommendation.recommender()
         sorted_movies = recommendation.get_similar_content_based_movies(movie_id, predicted_X)
+        sorted_movies = [movie.movie_id for movie in sorted_movies]
+        sorted_movies = sorted_movies[:5]
+        movies = Movie.objects.filter(movie_id__in=sorted_movies)
+        serializer = MovieSerializer(movies, many=True)
+        return Response(serializer.data)
+
+    @action(methods=['GET'], detail=False)
+    def get_similar_by_content(self, request):
+        movie = Movie.objects.get(id=int(request.query_params.get('id')))
+        movie_id = movie.movie_id
+        logger.info('received get similar movies by content request for movie with movie_id %s', movie_id)
+
+        properties = {}
+        total = 0
+        movies = Movie.objects.all()
+        for movie in movies:
+            genres = movie.genre.split('|')
+            for genre in genres:
+                if genre not in properties:
+                    properties[genre] = total
+                    total += 1
+
+        matrix = []
+        for movie in movies:
+            values = []
+            for i in range(total):
+                values.append(0)
+            genres = movie.genre.split('|')
+            for genre in genres:
+                values[properties[genre]] = 1
+            matrix.append(values)
+
+        matrix = np.array(matrix)
+        sorted_movies = recommendation.get_similar_content_based_movies(movie_id, matrix)
         sorted_movies = [movie.movie_id for movie in sorted_movies]
         sorted_movies = sorted_movies[:5]
         movies = Movie.objects.filter(movie_id__in=sorted_movies)
