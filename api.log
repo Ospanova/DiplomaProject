@@ -737,3 +737,29 @@ INFO -- 2020-05-08 17:26:45,962 -- received fovorite request
 INFO -- 2020-05-12 09:03:05,282 -- received request: recommend with user_id 32
 INFO -- 2020-05-12 09:07:58,123 -- received request: recommend with user_id 32
 INFO -- 2020-05-12 18:51:30,201 -- received request: recommend with user_id 32
+INFO -- 2020-05-13 08:46:16,515 -- received fovorite request
+INFO -- 2020-05-13 08:47:19,832 -- received fovorite request
+INFO -- 2020-05-13 08:47:57,188 -- received fovorite request
+INFO -- 2020-05-13 08:48:29,036 -- received fovorite request
+INFO -- 2020-05-13 09:44:44,450 -- received fovorite request
+INFO -- 2020-05-13 09:45:37,016 -- received fovorite request
+INFO -- 2020-05-13 09:46:24,527 -- received fovorite request
+INFO -- 2020-05-13 09:49:27,702 -- received fovorite request
+INFO -- 2020-05-13 10:11:19,039 -- received fovorite request
+INFO -- 2020-05-13 10:14:41,526 -- received fovorite request
+INFO -- 2020-05-13 10:19:24,955 -- received fovorite request
+INFO -- 2020-05-13 11:41:44,996 -- received request: recommend with user_id 32
+INFO -- 2020-05-13 11:41:54,487 -- received request: recommend with user_id 32
+INFO -- 2020-05-13 13:04:16,288 -- received request: recommend with user_id 32
+INFO -- 2020-05-13 13:04:36,500 -- received request: recommend with user_id 32
+INFO -- 2020-05-14 04:22:42,219 -- received fovorite request
+INFO -- 2020-05-14 04:23:23,518 -- received fovorite request
+INFO -- 2020-05-14 04:23:52,911 -- received fovorite request
+INFO -- 2020-05-14 04:24:43,200 -- received fovorite request
+INFO -- 2020-05-14 04:25:33,002 -- received fovorite request
+INFO -- 2020-05-14 04:28:22,732 -- received fovorite request
+INFO -- 2020-05-14 04:31:08,800 -- received fovorite request
+INFO -- 2020-05-14 04:32:06,814 -- received fovorite request
+INFO -- 2020-05-14 04:33:26,325 -- received fovorite request
+INFO -- 2020-05-14 04:33:54,067 -- received fovorite request
+INFO -- 2020-05-14 04:37:15,746 -- received fovorite request

@@ -28,6 +28,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['64.227.35.199', '127.0.0.1']
 
+# CELERY_BROKER_URL = env.str('CELERY_BROKER_URL', default='amqp://rabbitmq')
+CELERY_BROKER_URL = 'amqp://localhost'
+CELERY_RESULT_BACKEND = 'amqp://localhost'
+
+CELERY_TASK_SERIALIZER = 'json'
+
+CELERY_RESULT_SERIALIZER = 'json'
+
+CELERY_ACCEPT_CONTENT=['json']
+
+CELERY_ENABLE_UTC = True
 
 # Application definition
 

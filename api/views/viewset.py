@@ -5,7 +5,7 @@ import numpy as np
 
 from scipy.spatial import distance
 from rest_framework import viewsets
-from rest_framework import mixins
+from rest_framework import mixins, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser
@@ -17,6 +17,7 @@ from rest_framework.parsers import JSONParser, FormParser, MultiPartParser
 from api.models import *
 from api.serializers import *
 from api import recommendation
+from api.tasks import *
 from rest_framework.views import APIView
 # from django.utils import timezone
 
@@ -54,6 +55,9 @@ class MovieViewSet(viewsets.ModelViewSet):
     @action(methods=['GET', 'POST'], detail=False)
     def favorite(self, request):
         logger.info('received fovorite request')
+        # n = send_post_signup.delay()
+        # print("IDDD")
+        # print(n.get())
         if request.method == 'GET':
             fav_movies = request.user.favorite_movies.all()
             movies = Movie.objects.filter(id__in=fav_movies.values('movie_id'))
@@ -231,6 +235,10 @@ class CommentListViewSet(mixins.RetrieveModelMixin,
         return Response(serializer.data)
 
 
+def has_permission(created_by, user):
+    return created_by.id == user.id
+
+
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = BaseCommentSerializer
     permission_classes = (IsAuthenticated,)
@@ -238,8 +246,35 @@ class CommentViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return Comment.comments.filter(created_by=self.request.user)
 
+    def update(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        if not has_permission(instance.created_by, self.request.user):
+            return Response(serializer.data, status=status.HTTP_404_NOT_FOUND)
+        self.perform_update(serializer)
+
+        if getattr(instance, '_prefetched_objects_cache', None):
+            instance._prefetched_objects_cache = {}
+
+        return Response(serializer.data)
+
+    def perform_update(self, serializer):
+        serializer.save()
+
     def perform_create(self, serializer):
         return serializer.save(created_by=self.request.user)
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if not has_permission(instance.created_by, self.request.user):
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def perform_destroy(self, instance):
+        instance.delete()
 
 
 class MovieLikeListViewSet(mixins.RetrieveModelMixin,
@@ -263,9 +298,34 @@ class MovieLikeViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         return serializer.save(user=self.request.user)
 
+    def update(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        if not has_permission(instance.created_by, self.request.user):
+            return Response(serializer.data, status=status.HTTP_404_NOT_FOUND)
+        self.perform_update(serializer)
+
+        if getattr(instance, '_prefetched_objects_cache', None):
+            instance._prefetched_objects_cache = {}
+
+    def perform_update(self, serializer):
+        serializer.save()
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if not has_permission(instance.created_by, self.request.user):
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def perform_destroy(self, instance):
+        instance.delete()
+
 
 class CommentLikeListViewSet(mixins.RetrieveModelMixin,
-                           viewsets.GenericViewSet):
+                             viewsets.GenericViewSet):
     serializer_class = BaseCommentLikeSerializer
 
     @action(methods=['get'], detail=True)
@@ -284,3 +344,13 @@ class CommentLikeViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         return serializer.save(user=self.request.user)
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if not has_permission(instance.created_by, self.request.user):
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def perform_destroy(self, instance):
+        instance.delete()
