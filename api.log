@@ -783,3 +783,6 @@ INFO -- 2020-05-14 12:25:44,464 -- received request: get list sorted by rating b
 INFO -- 2020-05-14 12:25:44,487 -- received request: recommend with user_id 4
 INFO -- 2020-05-14 12:31:00,310 -- received request: recommend with user_id 4
 INFO -- 2020-05-14 12:32:15,118 -- received request: recommend with user_id 4
+INFO -- 2020-05-20 08:24:25,037 -- received request: recommend with user_id 4
+INFO -- 2020-05-21 12:59:45,438 -- received request: set rating from user 4: aida
+INFO -- 2020-05-21 13:00:06,944 -- received request: set rating from user 4: aida

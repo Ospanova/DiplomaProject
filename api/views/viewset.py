@@ -53,9 +53,10 @@ class MovieViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(queryset, many=True)
         current_user_id = request.user.id
-        # if current_user_id is not None:
-        #     n = recommend_async.delay(current_user_id)
-        #     recommendation_dict[current_user_id] = n.get()
+        if current_user_id is not None:
+            print("HERE")
+            n = recommend_async.delay(current_user_id)
+            recommendation_dict[current_user_id] = n.get()
 
         return Response(serializer.data)
 
@@ -169,8 +170,6 @@ class MovieViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET'], detail=False)
     def recommend(self, request):
-        df = pd.DataFrame(list(Myrating.objects.all().values()))
-        print(df.shape)
         current_user_id = request.user.id
         if current_user_id in recommendation_dict.keys():
             print("Already known info")
@@ -399,7 +398,18 @@ class CommentLikeViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return CommentLike.likes.filter(user=self.request.user)
 
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        if CommentLike.likes.all().filter(comment=serializer.validated_data['comment']) is not None:
+            print("REPEATED ")
+            return Response(status=status.HTTP_201_CREATED)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
     def perform_create(self, serializer):
+        print(serializer.validated_data['comment'])
         return serializer.save(user=self.request.user)
 
     def destroy(self, request, *args, **kwargs):

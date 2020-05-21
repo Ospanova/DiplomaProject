@@ -65,11 +65,15 @@ class MovieFullSerializer(MovieSerializer):
 
 class BaseCommentSerializer(serializers.ModelSerializer):
     movie = MovieSerializer
+    like_count = serializers.SerializerMethodField('get_like_count')
 
     class Meta:
         model = Comment
-        fields = ('id', 'movie', 'reply_to', 'created_by', 'created_at', 'content')
-        read_only_fields = ('id', 'created_by', 'created_at')
+        fields = ('id', 'movie', 'reply_to', 'created_by', 'created_at', 'content', 'like_count')
+        read_only_fields = ('id', 'created_by', 'created_at', 'like_count')
+
+    def get_like_count(self, comment):
+        return CommentLike.likes.get_comment_like(comment)
 
 
 class BaseMovieLikeSerializer(serializers.ModelSerializer):

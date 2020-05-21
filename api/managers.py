@@ -13,4 +13,4 @@ class MovieLikeManager(models.Manager):
 
 class CommentLikeManager(models.Manager):
     def get_comment_like(self, comment):
-        return super().get_queryset().filter(comment=comment)
+        return super().get_queryset().filter(comment=comment).count()

@@ -48,6 +48,9 @@ class Myrating(models.Model):
     rating = models.IntegerField(default=1, validators=[MaxValueValidator(5), MinValueValidator(0)])
 
 
+
+
+
 class Comment(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='movie_comments')
     reply_to = models.IntegerField(null=True, default=0)
