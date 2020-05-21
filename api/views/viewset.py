@@ -53,10 +53,10 @@ class MovieViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(queryset, many=True)
         current_user_id = request.user.id
-        if current_user_id is not None:
-            print("HERE")
-            n = recommend_async.delay(current_user_id)
-            recommendation_dict[current_user_id] = n.get()
+        # if current_user_id is not None:
+        #     print("HERE")
+        #     n = recommend_async.delay(current_user_id)
+        #     recommendation_dict[current_user_id] = n.get()
 
         return Response(serializer.data)
 
@@ -114,9 +114,9 @@ class MovieViewSet(viewsets.ModelViewSet):
         ordered = sorted(movies, key=operator.attrgetter('name'))
         serializer = MovieSerializer(ordered, many=True)
         current_user_id = request.user.id
-        if current_user_id is not None:
-            n = recommend_async.delay(current_user_id)
-            recommendation_dict[current_user_id] = n.get()
+        # if current_user_id is not None:
+        #     n = recommend_async.delay(current_user_id)
+        #     recommendation_dict[current_user_id] = n.get()
         return Response(serializer.data)
 
     @action(methods=['GET'], detail=False)
