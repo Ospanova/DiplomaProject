@@ -96,7 +96,7 @@ class MovieViewSet(viewsets.ModelViewSet):
     @action(methods=['POST'], detail=False)
     def rate(self, request):
         logger.info('received request: set rating from user %s', request.user)
-        movie_id = request.data['movie_id']
+        movie_id = Movie.objects.get(id=request.data['id']).movie_id
         rating = request.data['rating']
         movie = Movie.objects.get(movie_id=movie_id)
         Myrating.objects.create(user=request.user, movie=movie, rating=rating)
