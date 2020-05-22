@@ -1,13 +1,13 @@
-version: '3.7'
+version: '3'
 services:
   db:
     image: postgres
     environment:
       - POSTGRES_USER=aida
-      - POSTGRES_PASSWORD=aida
+      - POSTGRES_PASSWORD=postgres
   django:
     build: .
-    command: bash -c "sleep 5s && python manage.py migrate && python manage.py runserver 0.0.0.0:8888"
+    command: bash -c "sleep 5s && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8888"
     volumes:
       - ./src:/src
     ports:
@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
     environment:
-        DJANGO_SETTINGS_MODULE: 'cinema.settings'
+        DJANGO_SETTINGS_MODULE: cinema.settings
   rabbit:
     image: rabbitmq:alpine
     environment:
@@ -23,15 +23,14 @@ services:
       - RABBITMQ_DEFAULT_PASS=aida
     ports:
         - "5672:5672"
-    celery:
+  celery:
     restart: always
     build: .
-        context: .
     command:  celery -A cinema  worker -l info
     volumes:
         - ./src:/src
     environment:
         - C_FORCE_ROOT:true
-        - DJANGO_SETTINGS_MODULE: 'cinema.settings'
+        - DJANGO_SETTINGS_MODULE: cinema.settings
     depends_on:
         - rabbit
