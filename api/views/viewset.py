@@ -163,7 +163,7 @@ class MovieViewSet(viewsets.ModelViewSet):
     def attach(self, request):
         user = request.user
         logger.info('received request: attach movies')
-        csv_path = "/Users/aida/Downloads/cinema 2/api/views/web_movie.csv"
+        csv_path = "/home/aida/cinema/DiplomaProject/api/views/web_movie.csv"
 
         with open(csv_path, "r") as f_obj:
             csv_reader(f_obj, user)
