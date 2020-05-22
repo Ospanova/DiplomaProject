@@ -401,7 +401,8 @@ class CommentLikeViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        if CommentLike.likes.all().filter(comment=serializer.validated_data['comment']) is not None:
+        print(CommentLike.likes.all().filter(comment=serializer.validated_data['comment'], user=self.request.user))
+        if CommentLike.likes.all().filter(comment=serializer.validated_data['comment'], user=self.request.user) is not None:
             print("REPEATED ")
             return Response(status=status.HTTP_201_CREATED)
         self.perform_create(serializer)
