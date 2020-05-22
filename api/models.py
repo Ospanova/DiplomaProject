@@ -53,7 +53,6 @@ class Myrating(models.Model):
 
 class Comment(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='movie_comments')
-    reply_to = models.IntegerField(null=True, default=0)
     created_by = models.ForeignKey(MainUser, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     content = models.TextField(max_length=1000, default='')
@@ -64,7 +63,7 @@ class Comment(models.Model):
         verbose_name_plural = 'Comments'
 
     def __str__(self):
-        return f'{self.created_by}: {self.movie}'
+        return f'{self.id}: {self.movie}'
 
 
 class MovieLike(models.Model):
@@ -77,7 +76,7 @@ class MovieLike(models.Model):
         verbose_name_plural = 'MovieLikes'
 
     def __str__(self):
-        return f'{self.created_by}: {self.movie}'
+        return f'{self.id}: {self.movie}'
 
 
 class CommentLike(models.Model):
@@ -90,4 +89,4 @@ class CommentLike(models.Model):
         verbose_name_plural = 'CommentLikes'
 
     def __str__(self):
-        return f'{self.created_by}: {self.comment}'
+        return f'{self.id}: {self.comment}'

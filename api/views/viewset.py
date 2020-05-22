@@ -93,19 +93,30 @@ class MovieViewSet(viewsets.ModelViewSet):
             serializer = MovieSerializer(movies, many=True)
             return Response(serializer.data)
 
-    @action(methods=['POST'], detail=False)
+    @action(methods=['POST', 'GET'], detail=False)
     def rate(self, request):
-        logger.info('received request: set rating from user %s', request.user)
-        rating = request.data['rating']
         m_id = request.data['id']
         movie = Movie.objects.get(id=m_id)
-        Myrating.objects.create(user=request.user, movie=movie, rating=rating)
-        movie.sum_of_rates += rating
-        movie.no_of_rates += 1
-        movie.rating = movie.sum_of_rates / movie.no_of_rates
-        movie.save()
-        serializer = MovieSerializer(movie)
-        return Response(serializer.data)
+        current_user_id = request.user.id
+        if current_user_id is None:
+            return Response(status=status.HTTP_401_UNAUTHORIZED)
+        if request.method == 'GET':
+            ans = Myrating.objects.all().filter(movie=movie, user=request.user)
+            if ans:
+                return Response(str(ans[0].rating))
+            else:
+                return Response("0")
+
+        else :
+            logger.info('received request: set rating from user %s', request.user)
+            rating = request.data['rating']
+            Myrating.objects.create(user=request.user, movie=movie, rating=rating)
+            movie.sum_of_rates += rating
+            movie.no_of_rates += 1
+            movie.rating = movie.sum_of_rates / movie.no_of_rates
+            movie.save()
+            serializer = MovieSerializer(movie)
+            return Response(serializer.data)
 
     @action(methods=['GET'], detail=False)
     def get_sorted_by_rating(self, request):
@@ -135,9 +146,9 @@ class MovieViewSet(viewsets.ModelViewSet):
         def this_week(premiere):
             premiere_time = premiere.replace(tzinfo=None)
             now_time = datetime.now().replace(tzinfo=None)
-            difference = premiere_time - now_time
+            difference = (premiere_time - now_time)
             logger.info('number of days to wait to %s is : %s', premiere, difference.days)
-            return 0 <= difference.days < 7 and premiere_time.weekday() >= now_time.weekday()
+            return 0 <= abs(difference.days) < 40
 
         movies = Movie.objects.all()
         movies = [movie for movie in movies if this_week(movie.premiere)]
@@ -163,7 +174,7 @@ class MovieViewSet(viewsets.ModelViewSet):
     def attach(self, request):
         user = request.user
         logger.info('received request: attach movies')
-        csv_path = "/home/aida/cinema/DiplomaProject/api/views/web_movie.csv"
+        csv_path = "/Users/aida/Downloads/cinema/DiplomaProject/api/views/web_movie.csv"
 
         with open(csv_path, "r") as f_obj:
             csv_reader(f_obj, user)
@@ -292,7 +303,6 @@ class CommentListViewSet(mixins.RetrieveModelMixin,
 
 
 def has_permission(created_by, user):
-    print(user)
     return created_by.id == user.id
 
 
@@ -402,9 +412,7 @@ class CommentLikeViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        print(CommentLike.likes.all().filter(comment=serializer.validated_data['comment'], user=self.request.user))
         if CommentLike.likes.all().filter(comment=serializer.validated_data['comment'], user=self.request.user):
-            print("REPEATED ")
             return Response(status=status.HTTP_201_CREATED)
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
@@ -416,10 +424,8 @@ class CommentLikeViewSet(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
-        print(instance)
-        if not has_permission(instance.created_by, self.request.user):
+        if not has_permission(instance.user, self.request.user):
             return Response(status=status.HTTP_404_NOT_FOUND)
-        print(instance)
         self.perform_destroy(instance)
         return Response(status=status.HTTP_204_NO_CONTENT)
 

@@ -11,3 +11,5 @@ admin.site.register(Myrating)
 
 admin.site.register(Comment)
 
+admin.site.register(CommentLike)
+
