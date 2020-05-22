@@ -12,7 +12,7 @@ services:
   python: &python
     build:
       context: .
-      dockerfile: docker/dev/python/Dockerfile
+      dockerfile: ./Dockerfile
     environment:
       PYTHONUNBUFFERED: 1
     env_file:
