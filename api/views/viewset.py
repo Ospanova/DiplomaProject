@@ -292,6 +292,7 @@ class CommentListViewSet(mixins.RetrieveModelMixin,
 
 
 def has_permission(created_by, user):
+    print(user)
     return created_by.id == user.id
 
 
@@ -402,7 +403,7 @@ class CommentLikeViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         print(CommentLike.likes.all().filter(comment=serializer.validated_data['comment'], user=self.request.user))
-        if CommentLike.likes.all().filter(comment=serializer.validated_data['comment'], user=self.request.user) is not None:
+        if CommentLike.likes.all().filter(comment=serializer.validated_data['comment'], user=self.request.user):
             print("REPEATED ")
             return Response(status=status.HTTP_201_CREATED)
         self.perform_create(serializer)
@@ -415,8 +416,10 @@ class CommentLikeViewSet(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
+        print(instance)
         if not has_permission(instance.created_by, self.request.user):
             return Response(status=status.HTTP_404_NOT_FOUND)
+        print(instance)
         self.perform_destroy(instance)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
