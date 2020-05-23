@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import scipy.optimize
+import csv
 
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -82,15 +83,31 @@ def recommender():
 
     df = pd.DataFrame(list(Myrating.objects.all().values()))
 
-    number_of_users = len(MainUser.objects.all().distinct())
-    number_of_movies = len(Movie.objects.all().distinct())
+    actual_movies = len(list(Movie.objects.all().distinct()))
+    actual_users = len(list(MainUser.objects.all().distinct()))
+
+    number_of_movies = actual_movies + 5000
+    number_of_users = 200 + len(MainUser.objects.all().distinct())
     number_of_features = 10
 
     Y_cur = np.zeros((number_of_movies, number_of_users))
+
     for row in df.itertuples():
         movie = Movie.objects.get(id=row[2])
         m_id = movie.movie_id
         Y_cur[m_id - 1, row[4] - 1] = row[3]
+
+    ratings_csv_path = "/Users/alikhanokas/DiplomaProject/api/ratings.csv"
+
+    with open(ratings_csv_path, "r") as f_obj:
+        csv_reader = csv.DictReader(f_obj)
+        for line in csv_reader:
+            rating = float(line["rating"])
+            movie_id = int(line["movieId"]) + actual_movies
+            user_id = int(line["userId"]) + actual_users
+            if movie_id >= number_of_movies or user_id >= number_of_users:
+                continue
+            Y_cur[movie_id][user_id] = rating
 
     R_cur = np.zeros((number_of_movies, number_of_users))
     for i in range(Y_cur.shape[0]):
@@ -112,7 +129,7 @@ def recommender():
     lambd = 0.00000001
     result = scipy.optimize.fmin_cg(cofi_cost_func, x0=params, fprime=cofi_grad,
                                     args=(Y_cur, R_cur, number_of_users, number_of_movies,
-                                    number_of_features, lambd),maxiter=None, disp=True, full_output=True)
+                                    number_of_features, lambd),maxiter=30, disp=True, full_output=True)
 
 
     predicted_X, predicted_Theta = reshape_params(result[0], number_of_movies, number_of_users, number_of_features)
