@@ -215,7 +215,6 @@ class MovieViewSet(viewsets.ModelViewSet):
         movie = Movie.objects.get(id=int(request.query_params.get('id')))
         movie_id = movie.movie_id
         logger.info('received get similar movies by user ratings request for movie with movie_id %s', movie_id)
-
         prediction_matrix, Ymean, predicted_X = recommendation.recommender()
         sorted_movies = recommendation.get_similar_content_based_movies(movie_id, predicted_X)
         sorted_movies = [movie.movie_id for movie in sorted_movies]
@@ -260,16 +259,18 @@ class MovieViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET'], detail=False)
     def fill_ratings(self, request):
-        csv_path = "/Users/aida/Downloads/cinema 2/api/views/web_myrating.csv"
-
+        csv_path = "/Users/aida/Downloads/cinema/DiplomaProject/api/views/kazakh_ratings.csv"
+        actual_movies = 148
+        actual_users = len(list(MainUser.objects.all().distinct()))
+        for i in range(1, 48):
+            MainUser.objects.create_user(username=str(i + actual_users), password="123")
         with open(csv_path, "r") as f_obj:
             csv_reader = csv.DictReader(f_obj)
             for line in csv_reader:
-                # "id","rating","movie_id","user_id"
-                rating = line["rating"]
-                movie = Movie.objects.get(movie_id=line["movie_id"])
-                user = MainUser.objects.get(id=line["user_id"])
-
+                # userId,movieId,rating,timestamp
+                rating = float(line["rating"])
+                movie = Movie.objects.get(movie_id=int(line["movieId"]) - 193609 + actual_movies)
+                user = MainUser.objects.get(id=int(line["userId"]) - 609 + actual_users)
                 Myrating.objects.create(user=user, movie=movie, rating=rating)
         return Response("OK")
 
