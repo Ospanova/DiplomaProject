@@ -70,7 +70,7 @@ class MovieViewSet(viewsets.ModelViewSet):
             return [IsAdminUser()]
         return [IsAuthenticatedOrReadOnly()]
 
-    @action(methods=['GET', 'POST'], detail=False)
+    @action(methods=['GET', 'POST', 'DELETE'], detail=False)
     def favorite(self, request):
         logger.info('received fovorite request')
         if request.method == 'GET':
@@ -78,7 +78,7 @@ class MovieViewSet(viewsets.ModelViewSet):
             movies = Movie.objects.filter(id__in=fav_movies.values('movie_id'))
             serializer = MovieSerializer(movies, many=True)
             return Response(serializer.data)
-        else:
+        elif request.method == 'POST':
             print(request.data)
             movie_ids = request.data['movie_ids']
             for i in movie_ids:
@@ -92,6 +92,17 @@ class MovieViewSet(viewsets.ModelViewSet):
             movies = Movie.objects.filter(id__in=fav_movies.values('movie_id'))
             serializer = MovieSerializer(movies, many=True)
             return Response(serializer.data)
+        else:
+            movie_ids = request.data['movie_ids']
+            for i in movie_ids:
+                logging.info("movie id %s", i)
+                try:
+                    movie = Movie.objects.get(id=i)
+                    FavoriteMovie.objects.filter(movie=movie, user=request.user).delete()
+                except:
+                    raise Exception('not such movie')
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
 
     @action(methods=['POST', 'GET'], detail=False)
     def rate(self, request):
