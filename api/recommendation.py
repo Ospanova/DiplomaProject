@@ -86,7 +86,7 @@ def recommender():
     actual_movies = len(list(Movie.objects.all().distinct()))
     actual_users = len(list(MainUser.objects.all().distinct()))
 
-    number_of_movies = actual_movies + 5000
+    number_of_movies = actual_movies + 3000
     number_of_users = 200 + len(MainUser.objects.all().distinct())
     number_of_features = 10
 
@@ -97,7 +97,7 @@ def recommender():
         m_id = movie.movie_id
         Y_cur[m_id - 1, row[4] - 1] = row[3]
 
-    ratings_csv_path = "/Users/alikhanokas/DiplomaProject/api/ratings.csv"
+    ratings_csv_path = "/home/aida/cinema/DiplomaProject/api/ratings.csv"
 
     with open(ratings_csv_path, "r") as f_obj:
         csv_reader = csv.DictReader(f_obj)
@@ -129,7 +129,7 @@ def recommender():
     lambd = 0.00000001
     result = scipy.optimize.fmin_cg(cofi_cost_func, x0=params, fprime=cofi_grad,
                                     args=(Y_cur, R_cur, number_of_users, number_of_movies,
-                                    number_of_features, lambd),maxiter=30, disp=True, full_output=True)
+                                    number_of_features, lambd),maxiter=20, disp=True, full_output=True)
 
 
     predicted_X, predicted_Theta = reshape_params(result[0], number_of_movies, number_of_users, number_of_features)
