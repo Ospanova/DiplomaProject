@@ -136,9 +136,9 @@ def recommender():
 
     prediction_matrix = predicted_X.dot(predicted_Theta.T)
 
-    prediction_matrix = prediction_matrix[:actual_movies - 1]
-    Ymean = Ymean[:actual_movies - 1]
-    predicted_X = predicted_X[:actual_movies - 1]
+    prediction_matrix = prediction_matrix[:actual_movies]
+    Ymean = Ymean[:actual_movies]
+    predicted_X = predicted_X[:actual_movies]
 
     return prediction_matrix, Ymean, predicted_X
 
