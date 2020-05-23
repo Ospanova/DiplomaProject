@@ -127,6 +127,8 @@ class MovieViewSet(viewsets.ModelViewSet):
             movie.rating = movie.sum_of_rates / movie.no_of_rates
             movie.save()
             serializer = MovieSerializer(movie)
+            n = recommend_async.delay(current_user_id)
+            recommendation_dict[current_user_id] = n.get()
             return Response(serializer.data)
 
     @action(methods=['GET'], detail=False)
@@ -259,11 +261,9 @@ class MovieViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET'], detail=False)
     def fill_ratings(self, request):
-        csv_path = "/Users/aida/Downloads/cinema/DiplomaProject/api/views/kazakh_ratings.csv"
+        csv_path = "/home/aida/cinema/DiplomaProject/api/views/kazakh_ratings.csv"
         actual_movies = 148
         actual_users = len(list(MainUser.objects.all().distinct()))
-        for i in range(1, 48):
-            MainUser.objects.create_user(username=str(i + actual_users), password="123")
         with open(csv_path, "r") as f_obj:
             csv_reader = csv.DictReader(f_obj)
             for line in csv_reader:
@@ -272,6 +272,10 @@ class MovieViewSet(viewsets.ModelViewSet):
                 movie = Movie.objects.get(movie_id=int(line["movieId"]) - 193609 + actual_movies)
                 user = MainUser.objects.get(id=int(line["userId"]) - 609 + actual_users)
                 Myrating.objects.create(user=user, movie=movie, rating=rating)
+                movie.sum_of_rates += rating
+                movie.no_of_rates += 1
+                movie.rating = movie.sum_of_rates / movie.no_of_rates
+                movie.save()
         return Response("OK")
 
 
