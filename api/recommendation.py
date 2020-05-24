@@ -83,11 +83,11 @@ def recommender():
 
     df = pd.DataFrame(list(Myrating.objects.all().values()))
 
-    actual_movies = len(list(Movie.objects.all().distinct()))
+    actual_movies = len(list(Movie.objects.all().distinct())) + 1
     actual_users = len(list(MainUser.objects.all().distinct()))
 
     number_of_movies = actual_movies + 3000
-    number_of_users = 200 + len(MainUser.objects.all().distinct())
+    number_of_users = 201 + len(MainUser.objects.all().distinct())
     number_of_features = 10
 
     Y_cur = np.zeros((number_of_movies, number_of_users))
@@ -105,9 +105,9 @@ def recommender():
             rating = float(line["rating"])
             movie_id = int(line["movieId"]) + actual_movies
             user_id = int(line["userId"]) + actual_users
-            if movie_id >= number_of_movies or user_id >= number_of_users:
+            if movie_id > number_of_movies  or user_id > number_of_users:
                 continue
-            Y_cur[movie_id][user_id] = rating
+            Y_cur[movie_id - 1][user_id - 1] = rating
 
     R_cur = np.zeros((number_of_movies, number_of_users))
     for i in range(Y_cur.shape[0]):
