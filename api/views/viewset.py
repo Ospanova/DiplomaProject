@@ -93,25 +93,20 @@ class MovieViewSet(viewsets.ModelViewSet):
             serializer = MovieSerializer(movies, many=True)
             return Response(serializer.data)
         else:
-            movie_ids = request.data['movie_ids']
-            for i in movie_ids:
-                logging.info("movie id %s", i)
-                try:
-                    movie = Movie.objects.get(id=i)
-                    FavoriteMovie.objects.filter(movie=movie, user=request.user).delete()
-                except:
-                    raise Exception('not such movie')
+            try:
+                movie = Movie.objects.get(id=int(request.query_params.get('id')))
+                FavoriteMovie.objects.filter(movie=movie, user=request.user).delete()
+            except:
+                raise Exception('not such movie')
             return Response(status=status.HTTP_204_NO_CONTENT)
-
 
     @action(methods=['POST', 'GET'], detail=False)
     def rate(self, request):
-        m_id = request.data['id']
-        movie = Movie.objects.get(id=m_id)
         current_user_id = request.user.id
         if current_user_id is None:
             return Response(status=status.HTTP_401_UNAUTHORIZED)
         if request.method == 'GET':
+            movie = Movie.objects.get(id=int(request.query_params.get('id')))
             ans = Myrating.objects.all().filter(movie=movie, user=request.user)
             if ans:
                 return Response(str(ans[0].rating))
@@ -119,6 +114,8 @@ class MovieViewSet(viewsets.ModelViewSet):
                 return Response("0")
 
         else :
+            m_id = request.data['id']
+            movie = Movie.objects.get(id=m_id)
             logger.info('received request: set rating from user %s', request.user)
             rating = request.data['rating']
             Myrating.objects.create(user=request.user, movie=movie, rating=rating)
@@ -281,8 +278,6 @@ class MovieViewSet(viewsets.ModelViewSet):
             i.movie.no_of_rates += 1
             i.movie.rating = i.movie.sum_of_rates / i.movie.no_of_rates
             i.movie.save()
-        return Response("OK")
-
         return Response("OK")
 
 
